@@ -800,7 +800,113 @@ function generateChapter3Do() {
     return html;
 }
 
+// Unique quotes for each day
+function getDailyQuote(day) {
+    const quotes = [
+        "Success is the sum of small efforts repeated day in and day out. — Robert Collier",
+        "The way to get started is to quit talking and begin doing. — Walt Disney", 
+        "Innovation distinguishes between a leader and a follower. — Steve Jobs",
+        "Your limitation—it's only your imagination. — Khamare Clarke",
+        "Great things never come from comfort zones. — Neil Strauss",
+        "Dream it. Wish it. Do it. — Khamare Clarke",
+        "Success doesn't just find you. You have to go out and get it. — Khamare Clarke",
+        "The harder you work for something, the greater you'll feel when you achieve it. — Khamare Clarke",
+        "Dream bigger. Do bigger. — Khamare Clarke",
+        "Don't stop when you're tired. Stop when you're done. — Wesley Snipes",
+        "Wake up with determination. Go to bed with satisfaction. — George Lorimer",
+        "Do something today that your future self will thank you for. — Sean Patrick Flanery",
+        "Little things make big days. — Isabel Marant",
+        "It's going to be hard, but hard does not mean impossible. — Khamare Clarke",
+        "Don't wait for opportunity. Create it. — Khamare Clarke",
+        "Sometimes we're tested not to show our weaknesses, but to discover our strengths. — Khamare Clarke",
+        "The key to success is to focus on goals, not obstacles. — Khamare Clarke",
+        "Dream it. Believe it. Build it. — Khamare Clarke",
+        "Your only limit is your mind. — Khamare Clarke",
+        "Sometimes later becomes never. Do it now. — Khamare Clarke",
+        "Great things never come from comfort zones. — Khamare Clarke",
+        "Dream bigger. Do bigger. — Khamare Clarke",
+        "Success doesn't just find you. You have to go out and get it. — Khamare Clarke",
+        "Don't be afraid to give up the good to go for the great. — John D. Rockefeller",
+        "The way to get started is to quit talking and begin doing. — Walt Disney",
+        "If you really look closely, most overnight successes took a long time. — Steve Jobs",
+        "The secret of getting ahead is getting started. — Mark Twain",
+        "It is during our darkest moments that we must focus to see the light. — Aristotle",
+        "Believe you can and you're halfway there. — Theodore Roosevelt",
+        "The only impossible journey is the one you never begin. — Tony Robbins",
+        "In the middle of difficulty lies opportunity. — Albert Einstein",
+        "Success is not final, failure is not fatal: it is the courage to continue that counts. — Winston Churchill",
+        "The future belongs to those who believe in the beauty of their dreams. — Eleanor Roosevelt",
+        "It is never too late to be what you might have been. — George Eliot",
+        "Everything you've ever wanted is on the other side of fear. — George Addair",
+        "Believe in yourself and all that you are. — Christian D. Larson",
+        "The only way to do great work is to love what you do. — Steve Jobs",
+        "If you can dream it, you can achieve it. — Zig Ziglar",
+        "Don't watch the clock; do what it does. Keep going. — Sam Levenson",
+        "The best time to plant a tree was 20 years ago. The second best time is now. — Chinese Proverb",
+        "Your life does not get better by chance, it gets better by change. — Jim Rohn",
+        "The only person you are destined to become is the person you decide to be. — Ralph Waldo Emerson",
+        "Go confidently in the direction of your dreams. — Henry David Thoreau",
+        "Champions keep playing until they get it right. — Billie Jean King",
+        "Failure is the condiment that gives success its flavor. — Truman Capote",
+        "Don't be pushed around by the fears in your mind. — Khamare Clarke",
+        "Be led by the dreams in your heart. — Khamare Clarke",
+        "Difficult roads often lead to beautiful destinations. — Zig Ziglar",
+        "Progress is impossible without change. — George Bernard Shaw",
+        "A year from now you may wish you had started today. — Karen Lamb",
+        "You are never too old to set another goal. — C.S. Lewis",
+        "If you want to lift yourself up, lift up someone else. — Booker T. Washington",
+        "I have not failed. I've just found 10,000 ways that won't work. — Thomas Edison",
+        "A person who never made a mistake never tried anything new. — Albert Einstein",
+        "The person who says it cannot be done should not interrupt the person who is doing it. — Chinese Proverb",
+        "There are no traffic jams along the extra mile. — Roger Staubach",
+        "It is never too late to be what you might have been. — George Eliot",
+        "You become what you believe. — Oprah Winfrey",
+        "I would rather die of passion than of boredom. — Vincent van Gogh",
+        "A truly rich man is one whose children run into his arms when his hands are empty. — Khamare Clarke",
+        "It is not what we have but what we enjoy that constitutes our abundance. — Epicurus",
+        "If you want to lift yourself up, lift up someone else. — Booker T. Washington",
+        "The greatest glory in living lies not in never falling, but in rising every time we fall. — Nelson Mandela",
+        "The way to get started is to quit talking and begin doing. — Walt Disney",
+        "Your time is limited, so don't waste it living someone else's life. — Steve Jobs",
+        "If life were predictable it would cease to be life, and be without flavor. — Eleanor Roosevelt",
+        "If you look at what you have in life, you'll always have more. — Oprah Winfrey",
+        "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. — James Cameron",
+        "Life is what happens when you're busy making other plans. — John Lennon",
+        "Spread love everywhere you go. — Mother Teresa",
+        "When you reach the end of your rope, tie a knot in it and hang on. — Franklin D. Roosevelt",
+        "Always remember that you are absolutely unique. Just like everyone else. — Margaret Mead",
+        "Don't judge each day by the harvest you reap but by the seeds that you plant. — Robert Louis Stevenson",
+        "The future belongs to those who believe in the beauty of their dreams. — Eleanor Roosevelt",
+        "Tell me and I forget. Teach me and I remember. Involve me and I learn. — Benjamin Franklin",
+        "The best and most beautiful things in the world cannot be seen or even touched. — Helen Keller",
+        "It is during our darkest moments that we must focus to see the light. — Aristotle",
+        "Whoever is happy will make others happy too. — Anne Frank",
+        "Do not go where the path may lead, go instead where there is no path and leave a trail. — Ralph Waldo Emerson",
+        "You will face many defeats in life, but never let yourself be defeated. — Maya Angelou",
+        "The greatest glory in living lies not in never falling, but in rising every time we fall. — Nelson Mandela",
+        "In the end, it's not the years in your life that count. It's the life in your years. — Abraham Lincoln",
+        "Never let the fear of striking out keep you from playing the game. — Babe Ruth",
+        "Life is either a daring adventure or nothing at all. — Helen Keller",
+        "Many of life's failures are people who did not realize how close they were to success when they gave up. — Thomas Edison",
+        "You have been assigned this mountain to show others it can be moved. — Mel Robbins",
+        "What lies behind us and what lies before us are tiny matters compared to what lies within us. — Ralph Waldo Emerson",
+        "Success is not how high you have climbed, but how you make a positive difference to the world. — Roy T. Bennett",
+        "Be yourself; everyone else is already taken. — Oscar Wilde",
+        "Two things are infinite: the universe and human stupidity. — Albert Einstein",
+        "You only live once, but if you do it right, once is enough. — Mae West",
+        "Be the change that you wish to see in the world. — Mahatma Gandhi",
+        "In three words I can sum up everything I've learned about life: it goes on. — Robert Frost",
+        "If you want to know what a man's like, take a good look at how he treats his inferiors. — J.K. Rowling",
+        "Friendship is the only cement that will ever hold the world together. — Woodrow Wilson",
+        "If you tell the truth, you don't have to remember anything. — Mark Twain"
+    ];
+    
+    return quotes[(day - 1) % quotes.length];
+}
+
 function generateDailyPage(day, quote, pageNumber) {
+    const dailyQuote = getDailyQuote(day);
+    
     return `
     <!-- DAY ${day} -->
     <div class="page daily-page">
@@ -913,7 +1019,7 @@ function generateDailyPage(day, quote, pageNumber) {
         </div>
         
         <div class="page-number">${pageNumber}</div>
-        <div class="footer-wisdom">"Progress, not perfection." — Khamare Clarke</div>
+        <div class="footer-wisdom" style="font-size: 0.65rem;">${dailyQuote}</div>
     </div>`;
 }
 
@@ -1016,14 +1122,14 @@ function generateRewardCheckpoint(day, pageNumber) {
             </div>
         </div>
         
-        <div class="signature-section" style="text-align: center; margin-bottom: 2rem;">
+        <div class="signature-section" style="text-align: center; margin-bottom: 4rem;">
             <p style="color: var(--gold); margin-bottom: 1rem; font-size: 0.9rem;">Sign your name to claim this achievement:</p>
             <div style="border-bottom: 3px solid var(--gold); width: 280px; height: 1.5rem; margin: 0 auto 0.5rem;"></div>
             <p style="color: var(--gray); font-size: 0.8rem;">Your Signature</p>
         </div>
         
-        <div class="page-number">${pageNumber}</div>
-        <div class="footer-wisdom">"${checkpoint.quote}" — Khamare Clarke</div>
+        <div class="page-number" style="position: absolute; bottom: 8mm; right: 10mm; color: var(--gold); font-weight: bold; z-index: 10;">${pageNumber}</div>
+        <div class="footer-wisdom" style="position: absolute; bottom: 8mm; left: 10mm; right: 30mm; color: var(--gray); font-size: 0.65rem; font-style: italic; z-index: 10;">"${checkpoint.quote}" — Khamare Clarke</div>
     </div>`;
 }
 // CHAPTER 4 - REVIEW
