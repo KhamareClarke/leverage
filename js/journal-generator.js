@@ -7,37 +7,65 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function generateMasterJournal() {
-    // Create a temporary container to hold all pages
-    const tempContainer = document.createElement('div');
-    
-    // Generate all sections in order
-    tempContainer.innerHTML = 
-        generateChapter1Vision() +
-        generateChapter1VisionComplete() +
-        generateChapter2Plan() +
-        generateChapter3Do() +
-        generateChapter4Review() +
-        generateChapter5Legacy() +
-        generateBackMatter() +
-        generateBackCover();
-    
-    // Get the main container
-    const mainContainer = document.getElementById('journal-content');
-    if (!mainContainer) {
-        console.error('Could not find journal-content element');
-        return;
+    try {
+        console.log('Starting journal generation...');
+        
+        // Create a temporary container to hold all pages
+        const tempContainer = document.createElement('div');
+        
+        // Generate all sections in order with error checking
+        console.log('Generating Chapter 1 Vision...');
+        const chapter1 = generateChapter1Vision();
+        console.log('Generating Chapter 1 Vision Complete...');
+        const chapter1Complete = generateChapter1VisionComplete();
+        console.log('Generating Chapter 2 Plan...');
+        const chapter2 = generateChapter2Plan();
+        console.log('Generating Chapter 3 Do...');
+        const chapter3 = generateChapter3Do();
+        console.log('Generating Chapter 4 Review...');
+        const chapter4 = generateChapter4Review();
+        console.log('Generating Chapter 5 Legacy...');
+        const chapter5 = generateChapter5Legacy();
+        console.log('Generating Back Matter...');
+        const backMatter = generateBackMatter();
+        console.log('Generating Back Cover...');
+        const backCover = generateBackCover();
+        
+        tempContainer.innerHTML = 
+            chapter1 +
+            chapter1Complete +
+            chapter2 +
+            chapter3 +
+            chapter4 +
+            chapter5 +
+            backMatter +
+            backCover;
+        
+        // Get the main container
+        const mainContainer = document.getElementById('journal-content');
+        if (!mainContainer) {
+            console.error('Could not find journal-content element');
+            return;
+        }
+        
+        // Clear existing content and append new content
+        mainContainer.innerHTML = '';
+        while (tempContainer.firstChild) {
+            mainContainer.appendChild(tempContainer.firstChild);
+        }
+        
+        // Initialize interactive elements
+        initializeInteractiveElements();
+        
+        console.log('Journal content generated successfully - Total pages should be 129');
+        
+        // Count pages for verification
+        const pages = mainContainer.querySelectorAll('.page');
+        console.log(`Total pages generated: ${pages.length}`);
+        
+    } catch (error) {
+        console.error('Error generating journal:', error);
     }
-    
-    // Clear existing content and append new content
-    mainContainer.innerHTML = '';
-    while (tempContainer.firstChild) {
-        mainContainer.appendChild(tempContainer.firstChild);
-    }
-    
-    // Initialize interactive elements
-    initializeInteractiveElements();
-    
-    console.log('Journal content generated successfully');
 }
 
 // FRONT MATTER GENERATION - REMOVED TO ELIMINATE DUPLICATES
