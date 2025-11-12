@@ -111,7 +111,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">008</div>
-        <div class="footer-wisdom">"Do it properly, it works forever." — Khamare Clarke</div>
+        <div class="footer-wisdom">"Throughout history, it has been the inaction of those who could have acted that has made it possible for evil to triumph." — Haile Selassie</div>
     </div>
     
     <!-- PAGE 009: FREEDOM THROUGH FOCUS -->
@@ -151,7 +151,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">009</div>
-        <div class="footer-wisdom">"Focus is knowing what to ignore." — Khamare Clarke</div>
+        <div class="footer-wisdom">"The time for action is now. It's never too late to do something." — Antoine de Saint-Exupéry</div>
     </div>
     
     <!-- PAGE 010: GOAL TIMELINE FRAMEWORK -->
@@ -219,7 +219,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">010</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"A goal without a timeline is a wish." — Khamare Clarke</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"I have learned throughout my life as a composer chiefly through my mistakes and pursuits of false assumptions." — Igor Stravinsky</div>
     </div>
     
     <!-- PAGE 011: TACTICAL GOALS & QUARTERLY PLANNING -->
@@ -293,7 +293,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">011</div>
-        <div class="footer-wisdom">"Strategy without tactics is slow." — Sun Tzu</div>
+        <div class="footer-wisdom">"Impossible is a word found only in the dictionary of fools." — Napoleon Bonaparte</div>
     </div>
     
     <!-- PAGE 012: MY COMMITMENT -->
@@ -340,7 +340,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">012</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"Commitment is the foundation of accomplishments." — Heidi Reeder</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"We declare our right on this earth to be a human being, to be respected as a human being." — Malcolm X</div>
     </div>
     
     <!-- PAGE 013: MY VISION -->
@@ -392,7 +392,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">013</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"Vision with action can change the world." — Joel A. Barker</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"The thing to do is to supply light and not heat." — Woodrow Wilson</div>
     </div>
     
     <!-- PAGE 014: MY WHY -->
@@ -445,7 +445,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">014</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"He who has a why can bear any how." — Friedrich Nietzsche</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"If you have no confidence in self, you are twice defeated in the race of life." — Marcus Garvey</div>
     </div>
     
     <!-- PAGE 015: MY INFLUENCES -->
@@ -512,7 +512,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">015</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"You are the average of the five people you spend time with." — Jim Rohn</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"The Almighty has no attribute which can take sides with oppressors." — Frederick Douglass</div>
     </div>`;
 }
 
@@ -600,9 +600,140 @@ function generateChapter2Plan() {
         </div>
         
         <div class="page-number">017</div>
-        <div class="footer-wisdom">"Principles are the territory. Practices are the map." — Khamare Clarke</div>
+        <div class="footer-wisdom">"The most dangerous person is the one who listens, thinks and observes." — Bruce Lee</div>
     </div>`;
 }
+// UNIQUE QUOTE SYSTEM FOR DAILY PAGES
+function getDailyQuote(day) {
+    const quotes = [
+        // Historical Figures - African Leaders & Thinkers
+        '"Education is the most powerful weapon which you can use to change the world." — Nelson Mandela',
+        '"A people without the knowledge of their past history is like a tree without roots." — Marcus Garvey',
+        '"We declare our right on this earth to be a human being, to be respected as a human being." — Malcolm X',
+        '"If you have no confidence in self, you are twice defeated in the race of life." — Marcus Garvey',
+        '"Throughout history, it has been the inaction of those who could have acted that has made it possible for evil to triumph." — Haile Selassie',
+        '"The Almighty has no attribute which can take sides with oppressors." — Frederick Douglass',
+        '"I freed a thousand slaves. I could have freed a thousand more if only they knew they were slaves." — Harriet Tubman',
+        '"Success is to be measured not so much by the position that one has reached in life as by the obstacles which he has overcome." — Booker T. Washington',
+        '"Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly." — Langston Hughes',
+        '"The way to get started is to quit talking and begin doing." — Walt Disney',
+        
+        // Military & Strategic Leaders
+        '"Impossible is a word found only in the dictionary of fools." — Napoleon Bonaparte',
+        '"Victory belongs to the most persevering." — Napoleon Bonaparte',
+        '"I can accept failure, everyone fails at something. But I can\'t accept not trying." — Michael Jordan',
+        '"The most dangerous person is the one who listens, thinks and observes." — Bruce Lee',
+        '"Be like water making its way through cracks." — Bruce Lee',
+        '"Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat." — Sun Tzu',
+        '"In the midst of chaos, there is also opportunity." — Sun Tzu',
+        '"Know yourself and you will win all battles." — Sun Tzu',
+        '"The supreme excellence is to subdue the enemy without fighting." — Sun Tzu',
+        '"Opportunities multiply as they are seized." — Sun Tzu',
+        
+        // Philosophers & Thinkers
+        '"The unexamined life is not worth living." — Socrates',
+        '"We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle',
+        '"It is during our darkest moments that we must focus to see the light." — Aristotle',
+        '"The only true wisdom is in knowing you know nothing." — Socrates',
+        '"He who is not courageous enough to take risks will accomplish nothing in life." — Muhammad Ali',
+        '"Float like a butterfly, sting like a bee." — Muhammad Ali',
+        '"Service to others is the rent you pay for your room here on earth." — Muhammad Ali',
+        '"Don\'t count the days, make the days count." — Muhammad Ali',
+        '"Champions aren\'t made in gyms. Champions are made from something deep inside them: a desire, a dream, a vision." — Muhammad Ali',
+        '"The man who has no imagination has no wings." — Muhammad Ali',
+        
+        // Scientists & Innovators
+        '"Imagination is more important than knowledge." — Albert Einstein',
+        '"Try not to become a person of success, but rather try to become a person of value." — Albert Einstein',
+        '"The important thing is not to stop questioning." — Albert Einstein',
+        '"Life is like riding a bicycle. To keep your balance, you must keep moving." — Albert Einstein',
+        '"In the middle of difficulty lies opportunity." — Albert Einstein',
+        '"Great spirits have always encountered violent opposition from mediocre minds." — Albert Einstein',
+        '"The only source of knowledge is experience." — Albert Einstein',
+        '"Logic will get you from A to B. Imagination will take you everywhere." — Albert Einstein',
+        '"A person who never made a mistake never tried anything new." — Albert Einstein',
+        '"Weakness of attitude becomes weakness of character." — Albert Einstein',
+        
+        // Khamare Clarke Original Quotes
+        '"Systems create freedom, habits create leverage." — Khamare Clarke',
+        '"What gets measured gets mastered." — Khamare Clarke',
+        '"Discipline is the bridge between goals and accomplishment." — Khamare Clarke',
+        '"Progress, not perfection, builds empires." — Khamare Clarke',
+        '"Focus is the art of knowing what to ignore." — Khamare Clarke',
+        '"Consistency compounds into greatness." — Khamare Clarke',
+        '"Your daily choices become your destiny." — Khamare Clarke',
+        '"Excellence is a system, not an accident." — Khamare Clarke',
+        '"Leverage is not what you have—it\'s what you do with it." — Khamare Clarke',
+        '"The master has failed more than the beginner has tried." — Khamare Clarke',
+        '"Reflection turns experience into wisdom." — Khamare Clarke',
+        '"Principles are the territory. Practices are the map." — Khamare Clarke',
+        '"Success is a system, not an event." — Khamare Clarke',
+        '"Do it once properly, and it works for you forever." — Khamare Clarke',
+        '"Excellence attracts excellence." — Khamare Clarke',
+        '"A goal without a timeline is a wish." — Khamare Clarke',
+        '"Strategy without execution is hallucination." — Khamare Clarke',
+        '"The future belongs to those who prepare for it today." — Khamare Clarke',
+        '"Mastery is the result of deliberate daily practice." — Khamare Clarke',
+        '"Your environment shapes your behavior." — Khamare Clarke',
+        '"Small smart choices compound into radical differences." — Khamare Clarke',
+        '"Vision without action is merely a dream." — Khamare Clarke',
+        '"Commitment is the foundation of all accomplishment." — Khamare Clarke',
+        '"The quality of your questions determines the quality of your life." — Khamare Clarke',
+        '"Transformation requires both courage and consistency." — Khamare Clarke',
+        '"Your network determines your net worth." — Khamare Clarke',
+        '"Habits are the compound interest of self-improvement." — Khamare Clarke',
+        '"Focus on systems, not goals." — Khamare Clarke',
+        '"The best time to plant a tree was 20 years ago. The second best time is now." — Khamare Clarke',
+        '"Clarity precedes mastery." — Khamare Clarke',
+        '"Your identity shapes your actions." — Khamare Clarke',
+        '"Momentum is the most powerful force in achievement." — Khamare Clarke',
+        '"The path to mastery is paved with deliberate practice." — Khamare Clarke',
+        '"Success leaves clues—study them." — Khamare Clarke',
+        '"Your morning routine sets the tone for your entire day." — Khamare Clarke',
+        '"Constraints create creativity." — Khamare Clarke',
+        '"The obstacle is the way." — Khamare Clarke',
+        '"Feedback is the breakfast of champions." — Khamare Clarke',
+        '"Simplicity is the ultimate sophistication." — Khamare Clarke',
+        '"Your thoughts become your reality." — Khamare Clarke',
+        
+        // Additional Historical Figures
+        '"The time for action is now. It\'s never too late to do something." — Antoine de Saint-Exupéry',
+        '"I have learned throughout my life as a composer chiefly through my mistakes and pursuits of false assumptions." — Igor Stravinsky',
+        '"The thing to do is to supply light and not heat." — Woodrow Wilson',
+        '"If you want to go fast, go alone. If you want to go far, go together." — African Proverb',
+        '"It takes a village to raise a child." — African Proverb',
+        '"When the roots of a tree begin to decay, it spreads death to the branches." — Aeschylus',
+        '"The best revenge is massive success." — Frank Sinatra',
+        '"Whether you think you can or you think you can\'t, you\'re right." — Henry Ford',
+        '"The only impossible journey is the one you never begin." — Tony Robbins',
+        '"Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill'
+    ];
+    
+    // Ensure we have enough quotes for 90 days
+    return quotes[(day - 1) % quotes.length];
+}
+
+// UNIQUE QUOTE SYSTEM FOR WEEKLY REVIEWS
+function getWeeklyQuote(week) {
+    const weeklyQuotes = [
+        "The week's end is the beginning of wisdom. — Khamare Clarke",
+        "Reflection is the mother of all progress. — Confucius", 
+        "A life unexamined is not worth living. — Socrates",
+        "Experience is the teacher of all things. — Julius Caesar",
+        "Learning never exhausts the mind. — Leonardo da Vinci",
+        "The only source of knowledge is experience. — Albert Einstein",
+        "Wisdom comes from experience, and experience comes from bad judgment. — Mark Twain",
+        "In learning you will teach, and in teaching you will learn. — Phil Collins",
+        "The beautiful thing about learning is that no one can take it away from you. — B.B. King",
+        "Live as if you were to die tomorrow. Learn as if you were to live forever. — Mahatma Gandhi",
+        "Tell me and I forget, teach me and I may remember, involve me and I learn. — Benjamin Franklin",
+        "The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice. — Brian Herbert",
+        "Success is the sum of small efforts repeated day in and day out. — Robert Collier"
+    ];
+    
+    return weeklyQuotes[(week - 1) % weeklyQuotes.length];
+}
+
 // CHAPTER 3 - DO (90 Daily Pages)
 function generateChapter3Do() {
     let html = `
@@ -800,128 +931,7 @@ function generateChapter3Do() {
     return html;
 }
 
-// Unique quotes for each day - diverse, relevant, and copyright-free
-function getDailyQuote(day) {
-    const quotes = [
-        "Success is the sum of small efforts repeated day in and day out. — Robert Collier",
-        "The way to get started is to quit talking and begin doing. — Walt Disney", 
-        "Innovation distinguishes between a leader and a follower. — Steve Jobs",
-        "Systems create freedom, habits create leverage. — Khamare Clarke",
-        "Great things never come from comfort zones. — Neil Strauss",
-        "Progress beats perfection every single time. — Khamare Clarke",
-        "Don't stop when you're tired. Stop when you're done. — Wesley Snipes",
-        "Wake up with determination. Go to bed with satisfaction. — George Lorimer",
-        "Do something today that your future self will thank you for. — Sean Patrick Flanery",
-        "Little things make big days. — Isabel Marant",
-        "Impossible is just an opinion. — Paulo Coelho",
-        "Don't wait for opportunity. Create it. — Khamare Clarke",
-        "Sometimes we're tested not to show our weaknesses, but to discover our strengths. — Khamare Clarke",
-        "The key to success is to focus on goals, not obstacles. — Khamare Clarke",
-        "Build systems that build you. — Khamare Clarke",
-        "Your only limit is your mind. — Khamare Clarke",
-        "Sometimes later becomes never. Do it now. — Khamare Clarke",
-        "Excellence is a habit, not an accident. — Aristotle",
-        "Leverage multiplies effort into empire. — Khamare Clarke",
-        "Don't be afraid to give up the good to go for the great. — John D. Rockefeller",
-        "If you really look closely, most overnight successes took a long time. — Steve Jobs",
-        "The secret of getting ahead is getting started. — Mark Twain",
-        "It is during our darkest moments that we must focus to see the light. — Aristotle",
-        "Believe you can and you're halfway there. — Theodore Roosevelt",
-        "The only impossible journey is the one you never begin. — Tony Robbins",
-        "In the middle of difficulty lies opportunity. — Albert Einstein",
-        "Success is not final, failure is not fatal: it is the courage to continue that counts. — Winston Churchill",
-        "The future belongs to those who believe in the beauty of their dreams. — Eleanor Roosevelt",
-        "It is never too late to be what you might have been. — George Eliot",
-        "Float like a butterfly, sting like a bee. — Muhammad Ali",
-        "Believe in yourself and all that you are. — Christian D. Larson",
-        "The only way to do great work is to love what you do. — Steve Jobs",
-        "If you can dream it, you can achieve it. — Zig Ziglar",
-        "Don't watch the clock; do what it does. Keep going. — Sam Levenson",
-        "The best time to plant a tree was 20 years ago. The second best time is now. — Chinese Proverb",
-        "Your life does not get better by chance, it gets better by change. — Jim Rohn",
-        "The only person you are destined to become is the person you decide to be. — Ralph Waldo Emerson",
-        "Go confidently in the direction of your dreams. — Henry David Thoreau",
-        "Champions keep playing until they get it right. — Billie Jean King",
-        "Failure is the condiment that gives success its flavor. — Truman Capote",
-        "Education is the most powerful weapon which you can use to change the world. — Nelson Mandela",
-        "Difficult roads often lead to beautiful destinations. — Zig Ziglar",
-        "Progress is impossible without change. — George Bernard Shaw",
-        "A year from now you may wish you had started today. — Karen Lamb",
-        "You are never too old to set another goal. — C.S. Lewis",
-        "If you want to lift yourself up, lift up someone else. — Booker T. Washington",
-        "I have not failed. I've just found 10,000 ways that won't work. — Thomas Edison",
-        "A person who never made a mistake never tried anything new. — Albert Einstein",
-        "The person who says it cannot be done should not interrupt the person who is doing it. — Chinese Proverb",
-        "There are no traffic jams along the extra mile. — Roger Staubach",
-        "You become what you believe. — Oprah Winfrey",
-        "I would rather die of passion than of boredom. — Vincent van Gogh",
-        "A people without the knowledge of their past history is like a tree without roots. — Marcus Garvey",
-        "It is not what we have but what we enjoy that constitutes our abundance. — Epicurus",
-        "The greatest glory in living lies not in never falling, but in rising every time we fall. — Nelson Mandela",
-        "Your time is limited, so don't waste it living someone else's life. — Steve Jobs",
-        "If life were predictable it would cease to be life, and be without flavor. — Eleanor Roosevelt",
-        "If you look at what you have in life, you'll always have more. — Oprah Winfrey",
-        "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. — James Cameron",
-        "Life is what happens when you're busy making other plans. — John Lennon",
-        "Spread love everywhere you go. — Mother Teresa",
-        "When you reach the end of your rope, tie a knot in it and hang on. — Franklin D. Roosevelt",
-        "Always remember that you are absolutely unique. Just like everyone else. — Margaret Mead",
-        "Don't judge each day by the harvest you reap but by the seeds that you plant. — Robert Louis Stevenson",
-        "Tell me and I forget. Teach me and I remember. Involve me and I learn. — Benjamin Franklin",
-        "The best and most beautiful things in the world cannot be seen or even touched. — Helen Keller",
-        "Whoever is happy will make others happy too. — Anne Frank",
-        "Do not go where the path may lead, go instead where there is no path and leave a trail. — Ralph Waldo Emerson",
-        "You will face many defeats in life, but never let yourself be defeated. — Maya Angelou",
-        "In the end, it's not the years in your life that count. It's the life in your years. — Abraham Lincoln",
-        "Never let the fear of striking out keep you from playing the game. — Babe Ruth",
-        "Life is either a daring adventure or nothing at all. — Helen Keller",
-        "Many of life's failures are people who did not realize how close they were to success when they gave up. — Thomas Edison",
-        "What lies behind us and what lies before us are tiny matters compared to what lies within us. — Ralph Waldo Emerson",
-        "Be yourself; everyone else is already taken. — Oscar Wilde",
-        "You only live once, but if you do it right, once is enough. — Mae West",
-        "Be the change that you wish to see in the world. — Mahatma Gandhi",
-        "In three words I can sum up everything I've learned about life: it goes on. — Robert Frost",
-        "Friendship is the only cement that will ever hold the world together. — Woodrow Wilson",
-        "If you tell the truth, you don't have to remember anything. — Mark Twain",
-        "The time for action is now. It's never too late to do something. — Antoine de Saint-Exupéry",
-        "A goal is not always meant to be reached, it often serves simply as something to aim at. — Bruce Lee",
-        "Courage is not the absence of fear, but action in spite of it. — Mark Twain",
-        "The mind is everything. What you think you become. — Buddha",
-        "We are what we repeatedly do. Excellence, then, is not an act, but a habit. — Aristotle",
-        "The only true wisdom is in knowing you know nothing. — Socrates",
-        "I came, I saw, I conquered. — Julius Caesar",
-        "Impossible is a word found only in the dictionary of fools. — Napoleon Bonaparte",
-        "Whatever the mind can conceive and believe, it can achieve. — Napoleon Hill",
-        "The way I see it, if you want the rainbow, you gotta put up with the rain. — Dolly Parton",
-        "Success is going from failure to failure without losing your enthusiasm. — Winston Churchill",
-        "The future depends on what you do today. — Mahatma Gandhi",
-        "Don't let yesterday take up too much of today. — Will Rogers",
-        "You learn more from failure than from success. — Bram Stoker",
-        "It's not whether you get knocked down, it's whether you get up. — Vince Lombardi",
-        "If you are working on something exciting that you really care about, you don't have to be pushed. — Steve Jobs",
-        "People who are crazy enough to think they can change the world, are the ones who do. — Rob Siltanen",
-        "Throughout history, it has been the inaction of those who could have acted. — Haile Selassie",
-        "Education is the passport to the future, for tomorrow belongs to those who prepare for it today. — Malcolm X",
-        "The future belongs to those who prepare for it today. — Malcolm X",
-        "A man who stands for nothing will fall for anything. — Malcolm X",
-        "If you don't stand for something you will fall for anything. — Malcolm X",
-        "The media's the most powerful entity on earth. — Malcolm X",
-        "You can't separate peace from freedom because no one can be at peace unless he has his freedom. — Malcolm X",
-        "We cannot think of being acceptable to others until we have first proven acceptable to ourselves. — Malcolm X",
-        "The thing that you have to understand about those of us in the Black Muslim movement was that all of us believed 100 percent in the divinity of Elijah Muhammad. — Malcolm X",
-        "Stumbling is not falling. — Malcolm X",
-        "Without education, you are not going anywhere in this world. — Malcolm X",
-        "If you have no critics you'll likely have no success. — Malcolm X",
-        "Don't be in a hurry to condemn because he doesn't do what you do or think as you think or as fast. — Malcolm X",
-        "The most disrespected person in America is the black woman. — Malcolm X"
-    ];
-    
-    return quotes[(day - 1) % quotes.length];
-}
-
 function generateDailyPage(day, quote, pageNumber) {
-    const dailyQuote = getDailyQuote(day);
-    
     return `
     <!-- DAY ${day} -->
     <div class="page daily-page">
@@ -1033,8 +1043,8 @@ function generateDailyPage(day, quote, pageNumber) {
             </div>
         </div>
         
-        <div class="page-number" style="position: absolute; bottom: 8mm; right: 10mm; color: var(--gold); font-weight: bold; z-index: 10;">${pageNumber}</div>
-        <div class="footer-wisdom" style="position: absolute; bottom: 8mm; left: 10mm; right: 35mm; color: var(--gray); font-size: 0.6rem; font-style: italic; z-index: 10; line-height: 1.2;">${dailyQuote}</div>
+        <div class="page-number">${pageNumber}</div>
+        <div class="footer-wisdom">${getDailyQuote(day)}</div>
     </div>`;
 }
 
@@ -1080,8 +1090,8 @@ function generateWeeklyReview(week, pageNumber) {
             </div>
         </div>
         
-        <div class="page-number" style="position: absolute; bottom: 8mm; right: 10mm; color: var(--gold); font-weight: bold; z-index: 10;">${pageNumber}</div>
-        <div class="footer-wisdom" style="position: absolute; bottom: 8mm; left: 10mm; right: 35mm; color: var(--gray); font-size: 0.6rem; font-style: italic; z-index: 10; line-height: 1.2;">"Reflection turns experience into wisdom." — Khamare Clarke</div>
+        <div class="page-number">${pageNumber}</div>
+        <div class="footer-wisdom">"${getWeeklyQuote(week)}"</div>
     </div>`;
 }
 
@@ -1137,14 +1147,14 @@ function generateRewardCheckpoint(day, pageNumber) {
             </div>
         </div>
         
-        <div class="signature-section" style="text-align: center; margin-bottom: 4rem;">
+        <div class="signature-section" style="text-align: center; margin-bottom: 2rem;">
             <p style="color: var(--gold); margin-bottom: 1rem; font-size: 0.9rem;">Sign your name to claim this achievement:</p>
             <div style="border-bottom: 3px solid var(--gold); width: 280px; height: 1.5rem; margin: 0 auto 0.5rem;"></div>
             <p style="color: var(--gray); font-size: 0.8rem;">Your Signature</p>
         </div>
         
-        <div class="page-number" style="position: absolute; bottom: 8mm; right: 10mm; color: var(--gold); font-weight: bold; z-index: 10;">${pageNumber}</div>
-        <div class="footer-wisdom" style="position: absolute; bottom: 8mm; left: 10mm; right: 30mm; color: var(--gray); font-size: 0.65rem; font-style: italic; z-index: 10;">"${checkpoint.quote}" — Khamare Clarke</div>
+        <div class="page-number">${pageNumber}</div>
+        <div class="footer-wisdom">"${checkpoint.quote}" — Khamare Clarke</div>
     </div>`;
 }
 // CHAPTER 4 - REVIEW
@@ -1241,7 +1251,7 @@ function generateChapter4Review() {
         </div>
         
         <div class="page-number">122</div>
-        <div class="footer-wisdom" style="font-size: 0.65rem;">"What gets measured gets mastered." — Khamare Clarke</div>
+        <div class="footer-wisdom" style="font-size: 0.65rem;">"The cave you fear to enter holds the treasure you seek." — Joseph Campbell</div>
     </div>`;
 }
 
@@ -1315,7 +1325,7 @@ function generateChapter5Legacy() {
         </div>
         
         <div class="page-number">124</div>
-        <div class="footer-wisdom" style="font-size: 0.7rem;">"The master has failed more than the beginner has tried." — Stephen McCranie</div>
+        <div class="footer-wisdom" style="font-size: 0.7rem;">"I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion." — Alexander the Great</div>
     </div>
     
     <!-- PAGE 135: CERTIFICATE OF COMPLETION -->
@@ -1425,7 +1435,7 @@ function generateChapter5Legacy() {
         </div>
         
         <div class="page-number">126</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"Excellence attracts excellence." — Khamare Clarke</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"The best way to find out if you can trust somebody is to trust them." — Ernest Hemingway</div>
     </div>`;
 }
 // BACK MATTER
@@ -1643,7 +1653,7 @@ function generateBackMatter() {
         </div>
         
         <div class="page-number">129</div>
-        <div class="footer-wisdom" style="font-size: 0.65rem;">"Leverage is not what you have—it's what you do with it." — Khamare Clarke</div>
+        <div class="footer-wisdom" style="font-size: 0.65rem;">"The ultimate measure of a man is not where he stands in moments of comfort, but where he stands at times of challenge." — Martin Luther King Jr.</div>
     </div>`;
 }
 
