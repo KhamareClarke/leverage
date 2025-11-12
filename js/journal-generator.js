@@ -800,34 +800,29 @@ function generateChapter3Do() {
     return html;
 }
 
-// Unique quotes for each day
+// Unique quotes for each day - diverse, relevant, and copyright-free
 function getDailyQuote(day) {
     const quotes = [
         "Success is the sum of small efforts repeated day in and day out. — Robert Collier",
         "The way to get started is to quit talking and begin doing. — Walt Disney", 
         "Innovation distinguishes between a leader and a follower. — Steve Jobs",
-        "Your limitation—it's only your imagination. — Khamare Clarke",
+        "Systems create freedom, habits create leverage. — Khamare Clarke",
         "Great things never come from comfort zones. — Neil Strauss",
-        "Dream it. Wish it. Do it. — Khamare Clarke",
-        "Success doesn't just find you. You have to go out and get it. — Khamare Clarke",
-        "The harder you work for something, the greater you'll feel when you achieve it. — Khamare Clarke",
-        "Dream bigger. Do bigger. — Khamare Clarke",
+        "Progress beats perfection every single time. — Khamare Clarke",
         "Don't stop when you're tired. Stop when you're done. — Wesley Snipes",
         "Wake up with determination. Go to bed with satisfaction. — George Lorimer",
         "Do something today that your future self will thank you for. — Sean Patrick Flanery",
         "Little things make big days. — Isabel Marant",
-        "It's going to be hard, but hard does not mean impossible. — Khamare Clarke",
+        "Impossible is just an opinion. — Paulo Coelho",
         "Don't wait for opportunity. Create it. — Khamare Clarke",
         "Sometimes we're tested not to show our weaknesses, but to discover our strengths. — Khamare Clarke",
         "The key to success is to focus on goals, not obstacles. — Khamare Clarke",
-        "Dream it. Believe it. Build it. — Khamare Clarke",
+        "Build systems that build you. — Khamare Clarke",
         "Your only limit is your mind. — Khamare Clarke",
         "Sometimes later becomes never. Do it now. — Khamare Clarke",
-        "Great things never come from comfort zones. — Khamare Clarke",
-        "Dream bigger. Do bigger. — Khamare Clarke",
-        "Success doesn't just find you. You have to go out and get it. — Khamare Clarke",
+        "Excellence is a habit, not an accident. — Aristotle",
+        "Leverage multiplies effort into empire. — Khamare Clarke",
         "Don't be afraid to give up the good to go for the great. — John D. Rockefeller",
-        "The way to get started is to quit talking and begin doing. — Walt Disney",
         "If you really look closely, most overnight successes took a long time. — Steve Jobs",
         "The secret of getting ahead is getting started. — Mark Twain",
         "It is during our darkest moments that we must focus to see the light. — Aristotle",
@@ -837,7 +832,7 @@ function getDailyQuote(day) {
         "Success is not final, failure is not fatal: it is the courage to continue that counts. — Winston Churchill",
         "The future belongs to those who believe in the beauty of their dreams. — Eleanor Roosevelt",
         "It is never too late to be what you might have been. — George Eliot",
-        "Everything you've ever wanted is on the other side of fear. — George Addair",
+        "Float like a butterfly, sting like a bee. — Muhammad Ali",
         "Believe in yourself and all that you are. — Christian D. Larson",
         "The only way to do great work is to love what you do. — Steve Jobs",
         "If you can dream it, you can achieve it. — Zig Ziglar",
@@ -848,8 +843,7 @@ function getDailyQuote(day) {
         "Go confidently in the direction of your dreams. — Henry David Thoreau",
         "Champions keep playing until they get it right. — Billie Jean King",
         "Failure is the condiment that gives success its flavor. — Truman Capote",
-        "Don't be pushed around by the fears in your mind. — Khamare Clarke",
-        "Be led by the dreams in your heart. — Khamare Clarke",
+        "Education is the most powerful weapon which you can use to change the world. — Nelson Mandela",
         "Difficult roads often lead to beautiful destinations. — Zig Ziglar",
         "Progress is impossible without change. — George Bernard Shaw",
         "A year from now you may wish you had started today. — Karen Lamb",
@@ -859,14 +853,11 @@ function getDailyQuote(day) {
         "A person who never made a mistake never tried anything new. — Albert Einstein",
         "The person who says it cannot be done should not interrupt the person who is doing it. — Chinese Proverb",
         "There are no traffic jams along the extra mile. — Roger Staubach",
-        "It is never too late to be what you might have been. — George Eliot",
         "You become what you believe. — Oprah Winfrey",
         "I would rather die of passion than of boredom. — Vincent van Gogh",
-        "A truly rich man is one whose children run into his arms when his hands are empty. — Khamare Clarke",
+        "A people without the knowledge of their past history is like a tree without roots. — Marcus Garvey",
         "It is not what we have but what we enjoy that constitutes our abundance. — Epicurus",
-        "If you want to lift yourself up, lift up someone else. — Booker T. Washington",
         "The greatest glory in living lies not in never falling, but in rising every time we fall. — Nelson Mandela",
-        "The way to get started is to quit talking and begin doing. — Walt Disney",
         "Your time is limited, so don't waste it living someone else's life. — Steve Jobs",
         "If life were predictable it would cease to be life, and be without flavor. — Eleanor Roosevelt",
         "If you look at what you have in life, you'll always have more. — Oprah Winfrey",
@@ -876,29 +867,53 @@ function getDailyQuote(day) {
         "When you reach the end of your rope, tie a knot in it and hang on. — Franklin D. Roosevelt",
         "Always remember that you are absolutely unique. Just like everyone else. — Margaret Mead",
         "Don't judge each day by the harvest you reap but by the seeds that you plant. — Robert Louis Stevenson",
-        "The future belongs to those who believe in the beauty of their dreams. — Eleanor Roosevelt",
         "Tell me and I forget. Teach me and I remember. Involve me and I learn. — Benjamin Franklin",
         "The best and most beautiful things in the world cannot be seen or even touched. — Helen Keller",
-        "It is during our darkest moments that we must focus to see the light. — Aristotle",
         "Whoever is happy will make others happy too. — Anne Frank",
         "Do not go where the path may lead, go instead where there is no path and leave a trail. — Ralph Waldo Emerson",
         "You will face many defeats in life, but never let yourself be defeated. — Maya Angelou",
-        "The greatest glory in living lies not in never falling, but in rising every time we fall. — Nelson Mandela",
         "In the end, it's not the years in your life that count. It's the life in your years. — Abraham Lincoln",
         "Never let the fear of striking out keep you from playing the game. — Babe Ruth",
         "Life is either a daring adventure or nothing at all. — Helen Keller",
         "Many of life's failures are people who did not realize how close they were to success when they gave up. — Thomas Edison",
-        "You have been assigned this mountain to show others it can be moved. — Mel Robbins",
         "What lies behind us and what lies before us are tiny matters compared to what lies within us. — Ralph Waldo Emerson",
-        "Success is not how high you have climbed, but how you make a positive difference to the world. — Roy T. Bennett",
         "Be yourself; everyone else is already taken. — Oscar Wilde",
-        "Two things are infinite: the universe and human stupidity. — Albert Einstein",
         "You only live once, but if you do it right, once is enough. — Mae West",
         "Be the change that you wish to see in the world. — Mahatma Gandhi",
         "In three words I can sum up everything I've learned about life: it goes on. — Robert Frost",
-        "If you want to know what a man's like, take a good look at how he treats his inferiors. — J.K. Rowling",
         "Friendship is the only cement that will ever hold the world together. — Woodrow Wilson",
-        "If you tell the truth, you don't have to remember anything. — Mark Twain"
+        "If you tell the truth, you don't have to remember anything. — Mark Twain",
+        "The time for action is now. It's never too late to do something. — Antoine de Saint-Exupéry",
+        "A goal is not always meant to be reached, it often serves simply as something to aim at. — Bruce Lee",
+        "Courage is not the absence of fear, but action in spite of it. — Mark Twain",
+        "The mind is everything. What you think you become. — Buddha",
+        "We are what we repeatedly do. Excellence, then, is not an act, but a habit. — Aristotle",
+        "The only true wisdom is in knowing you know nothing. — Socrates",
+        "I came, I saw, I conquered. — Julius Caesar",
+        "Impossible is a word found only in the dictionary of fools. — Napoleon Bonaparte",
+        "Whatever the mind can conceive and believe, it can achieve. — Napoleon Hill",
+        "The way I see it, if you want the rainbow, you gotta put up with the rain. — Dolly Parton",
+        "Success is going from failure to failure without losing your enthusiasm. — Winston Churchill",
+        "The future depends on what you do today. — Mahatma Gandhi",
+        "Don't let yesterday take up too much of today. — Will Rogers",
+        "You learn more from failure than from success. — Bram Stoker",
+        "It's not whether you get knocked down, it's whether you get up. — Vince Lombardi",
+        "If you are working on something exciting that you really care about, you don't have to be pushed. — Steve Jobs",
+        "People who are crazy enough to think they can change the world, are the ones who do. — Rob Siltanen",
+        "Throughout history, it has been the inaction of those who could have acted. — Haile Selassie",
+        "Education is the passport to the future, for tomorrow belongs to those who prepare for it today. — Malcolm X",
+        "The future belongs to those who prepare for it today. — Malcolm X",
+        "A man who stands for nothing will fall for anything. — Malcolm X",
+        "If you don't stand for something you will fall for anything. — Malcolm X",
+        "The media's the most powerful entity on earth. — Malcolm X",
+        "You can't separate peace from freedom because no one can be at peace unless he has his freedom. — Malcolm X",
+        "We cannot think of being acceptable to others until we have first proven acceptable to ourselves. — Malcolm X",
+        "The thing that you have to understand about those of us in the Black Muslim movement was that all of us believed 100 percent in the divinity of Elijah Muhammad. — Malcolm X",
+        "Stumbling is not falling. — Malcolm X",
+        "Without education, you are not going anywhere in this world. — Malcolm X",
+        "If you have no critics you'll likely have no success. — Malcolm X",
+        "Don't be in a hurry to condemn because he doesn't do what you do or think as you think or as fast. — Malcolm X",
+        "The most disrespected person in America is the black woman. — Malcolm X"
     ];
     
     return quotes[(day - 1) % quotes.length];
@@ -1018,8 +1033,8 @@ function generateDailyPage(day, quote, pageNumber) {
             </div>
         </div>
         
-        <div class="page-number">${pageNumber}</div>
-        <div class="footer-wisdom" style="font-size: 0.65rem;">${dailyQuote}</div>
+        <div class="page-number" style="position: absolute; bottom: 8mm; right: 10mm; color: var(--gold); font-weight: bold; z-index: 10;">${pageNumber}</div>
+        <div class="footer-wisdom" style="position: absolute; bottom: 8mm; left: 10mm; right: 35mm; color: var(--gray); font-size: 0.6rem; font-style: italic; z-index: 10; line-height: 1.2;">${dailyQuote}</div>
     </div>`;
 }
 
@@ -1065,8 +1080,8 @@ function generateWeeklyReview(week, pageNumber) {
             </div>
         </div>
         
-        <div class="page-number">${pageNumber}</div>
-        <div class="footer-wisdom">"Reflection turns experience into wisdom." — Khamare Clarke</div>
+        <div class="page-number" style="position: absolute; bottom: 8mm; right: 10mm; color: var(--gold); font-weight: bold; z-index: 10;">${pageNumber}</div>
+        <div class="footer-wisdom" style="position: absolute; bottom: 8mm; left: 10mm; right: 35mm; color: var(--gray); font-size: 0.6rem; font-style: italic; z-index: 10; line-height: 1.2;">"Reflection turns experience into wisdom." — Khamare Clarke</div>
     </div>`;
 }
 
