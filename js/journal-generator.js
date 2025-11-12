@@ -111,7 +111,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">008</div>
-        <div class="footer-wisdom">"Throughout history, it has been the inaction of those who could have acted that has made it possible for evil to triumph." — Haile Selassie</div>
+        <div class="footer-wisdom">"Action is the foundational key to all success." — Pablo Picasso</div>
     </div>
     
     <!-- PAGE 009: FREEDOM THROUGH FOCUS -->
@@ -151,7 +151,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">009</div>
-        <div class="footer-wisdom">"The time for action is now. It's never too late to do something." — Antoine de Saint-Exupéry</div>
+        <div class="footer-wisdom">"Focus is the art of knowing what to ignore." — Khamare Clarke</div>
     </div>
     
     <!-- PAGE 010: GOAL TIMELINE FRAMEWORK -->
@@ -219,7 +219,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">010</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"I have learned throughout my life as a composer chiefly through my mistakes and pursuits of false assumptions." — Igor Stravinsky</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"A goal without a timeline is a wish." — Khamare Clarke</div>
     </div>
     
     <!-- PAGE 011: TACTICAL GOALS & QUARTERLY PLANNING -->
@@ -293,7 +293,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">011</div>
-        <div class="footer-wisdom">"Impossible is a word found only in the dictionary of fools." — Napoleon Bonaparte</div>
+        <div class="footer-wisdom">"Strategy without tactics is slow." — Sun Tzu</div>
     </div>
     
     <!-- PAGE 012: MY COMMITMENT -->
@@ -340,7 +340,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">012</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"We declare our right on this earth to be a human being, to be respected as a human being." — Malcolm X</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"Commitment is the foundation of accomplishment." — Khamare Clarke</div>
     </div>
     
     <!-- PAGE 013: MY VISION -->
@@ -392,7 +392,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">013</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"The thing to do is to supply light and not heat." — Woodrow Wilson</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"Vision without action is merely a dream." — Joel A. Barker</div>
     </div>
     
     <!-- PAGE 014: MY WHY -->
@@ -445,7 +445,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">014</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"If you have no confidence in self, you are twice defeated in the race of life." — Marcus Garvey</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"He who has a why can bear any how." — Friedrich Nietzsche</div>
     </div>
     
     <!-- PAGE 015: MY INFLUENCES -->
@@ -512,7 +512,7 @@ function generateChapter1VisionComplete() {
         </div>
         
         <div class="page-number">015</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"The Almighty has no attribute which can take sides with oppressors." — Frederick Douglass</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"You become what you think about most." — Earl Nightingale</div>
     </div>`;
 }
 
@@ -603,110 +603,103 @@ function generateChapter2Plan() {
         <div class="footer-wisdom">"The most dangerous person is the one who listens, thinks and observes." — Bruce Lee</div>
     </div>`;
 }
-// UNIQUE QUOTE SYSTEM FOR DAILY PAGES
+// UNIQUE QUOTE SYSTEM FOR DAILY PAGES - BALANCED GLOBAL LEADERS
 function getDailyQuote(day) {
     const quotes = [
-        // Historical Figures - African Leaders & Thinkers
-        '"Education is the most powerful weapon which you can use to change the world." — Nelson Mandela',
-        '"A people without the knowledge of their past history is like a tree without roots." — Marcus Garvey',
-        '"We declare our right on this earth to be a human being, to be respected as a human being." — Malcolm X',
-        '"If you have no confidence in self, you are twice defeated in the race of life." — Marcus Garvey',
-        '"Throughout history, it has been the inaction of those who could have acted that has made it possible for evil to triumph." — Haile Selassie',
-        '"The Almighty has no attribute which can take sides with oppressors." — Frederick Douglass',
-        '"I freed a thousand slaves. I could have freed a thousand more if only they knew they were slaves." — Harriet Tubman',
-        '"Success is to be measured not so much by the position that one has reached in life as by the obstacles which he has overcome." — Booker T. Washington',
-        '"Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly." — Langston Hughes',
-        '"The way to get started is to quit talking and begin doing." — Walt Disney',
-        
         // Military & Strategic Leaders
-        '"Impossible is a word found only in the dictionary of fools." — Napoleon Bonaparte',
         '"Victory belongs to the most persevering." — Napoleon Bonaparte',
-        '"I can accept failure, everyone fails at something. But I can\'t accept not trying." — Michael Jordan',
-        '"The most dangerous person is the one who listens, thinks and observes." — Bruce Lee',
-        '"Be like water making its way through cracks." — Bruce Lee',
-        '"Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat." — Sun Tzu',
-        '"In the midst of chaos, there is also opportunity." — Sun Tzu',
         '"Know yourself and you will win all battles." — Sun Tzu',
-        '"The supreme excellence is to subdue the enemy without fighting." — Sun Tzu',
-        '"Opportunities multiply as they are seized." — Sun Tzu',
+        '"I came, I saw, I conquered." — Julius Caesar',
+        '"Fortune favors the bold." — Alexander the Great',
+        '"In war, the way is to avoid what is strong and to strike at what is weak." — Sun Tzu',
         
-        // Philosophers & Thinkers
+        // Philosophers & Ancient Wisdom
+        '"We are what we repeatedly do. Excellence is not an act, but a habit." — Aristotle',
         '"The unexamined life is not worth living." — Socrates',
-        '"We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle',
-        '"It is during our darkest moments that we must focus to see the light." — Aristotle',
-        '"The only true wisdom is in knowing you know nothing." — Socrates',
-        '"He who is not courageous enough to take risks will accomplish nothing in life." — Muhammad Ali',
-        '"Float like a butterfly, sting like a bee." — Muhammad Ali',
-        '"Service to others is the rent you pay for your room here on earth." — Muhammad Ali',
-        '"Don\'t count the days, make the days count." — Muhammad Ali',
-        '"Champions aren\'t made in gyms. Champions are made from something deep inside them: a desire, a dream, a vision." — Muhammad Ali',
-        '"The man who has no imagination has no wings." — Muhammad Ali',
+        '"Quality is not an act, it is a habit." — Aristotle',
+        '"It does not matter how slowly you go as long as you do not stop." — Confucius',
+        '"The man who moves a mountain begins by carrying away small stones." — Confucius',
         
         // Scientists & Innovators
-        '"Imagination is more important than knowledge." — Albert Einstein',
-        '"Try not to become a person of success, but rather try to become a person of value." — Albert Einstein',
-        '"The important thing is not to stop questioning." — Albert Einstein',
-        '"Life is like riding a bicycle. To keep your balance, you must keep moving." — Albert Einstein',
+        '"Genius is one percent inspiration, ninety-nine percent perspiration." — Thomas Edison',
         '"In the middle of difficulty lies opportunity." — Albert Einstein',
-        '"Great spirits have always encountered violent opposition from mediocre minds." — Albert Einstein',
-        '"The only source of knowledge is experience." — Albert Einstein',
-        '"Logic will get you from A to B. Imagination will take you everywhere." — Albert Einstein',
-        '"A person who never made a mistake never tried anything new." — Albert Einstein',
-        '"Weakness of attitude becomes weakness of character." — Albert Einstein',
+        '"The way to get started is to quit talking and begin doing." — Walt Disney',
+        '"Innovation distinguishes between a leader and a follower." — Steve Jobs',
+        '"Stay hungry, stay foolish." — Steve Jobs',
         
-        // Khamare Clarke Original Quotes
-        '"Systems create freedom, habits create leverage." — Khamare Clarke',
-        '"What gets measured gets mastered." — Khamare Clarke',
-        '"Discipline is the bridge between goals and accomplishment." — Khamare Clarke',
-        '"Progress, not perfection, builds empires." — Khamare Clarke',
-        '"Focus is the art of knowing what to ignore." — Khamare Clarke',
-        '"Consistency compounds into greatness." — Khamare Clarke',
-        '"Your daily choices become your destiny." — Khamare Clarke',
-        '"Excellence is a system, not an accident." — Khamare Clarke',
-        '"Leverage is not what you have—it\'s what you do with it." — Khamare Clarke',
-        '"The master has failed more than the beginner has tried." — Khamare Clarke',
-        '"Reflection turns experience into wisdom." — Khamare Clarke',
-        '"Principles are the territory. Practices are the map." — Khamare Clarke',
-        '"Success is a system, not an event." — Khamare Clarke',
-        '"Do it once properly, and it works for you forever." — Khamare Clarke',
-        '"Excellence attracts excellence." — Khamare Clarke',
-        '"A goal without a timeline is a wish." — Khamare Clarke',
-        '"Strategy without execution is hallucination." — Khamare Clarke',
-        '"The future belongs to those who prepare for it today." — Khamare Clarke',
-        '"Mastery is the result of deliberate daily practice." — Khamare Clarke',
-        '"Your environment shapes your behavior." — Khamare Clarke',
-        '"Small smart choices compound into radical differences." — Khamare Clarke',
-        '"Vision without action is merely a dream." — Khamare Clarke',
-        '"Commitment is the foundation of all accomplishment." — Khamare Clarke',
-        '"The quality of your questions determines the quality of your life." — Khamare Clarke',
-        '"Transformation requires both courage and consistency." — Khamare Clarke',
-        '"Your network determines your net worth." — Khamare Clarke',
-        '"Habits are the compound interest of self-improvement." — Khamare Clarke',
-        '"Focus on systems, not goals." — Khamare Clarke',
-        '"The best time to plant a tree was 20 years ago. The second best time is now." — Khamare Clarke',
-        '"Clarity precedes mastery." — Khamare Clarke',
-        '"Your identity shapes your actions." — Khamare Clarke',
-        '"Momentum is the most powerful force in achievement." — Khamare Clarke',
-        '"The path to mastery is paved with deliberate practice." — Khamare Clarke',
-        '"Success leaves clues—study them." — Khamare Clarke',
-        '"Your morning routine sets the tone for your entire day." — Khamare Clarke',
-        '"Constraints create creativity." — Khamare Clarke',
-        '"The obstacle is the way." — Khamare Clarke',
-        '"Feedback is the breakfast of champions." — Khamare Clarke',
-        '"Simplicity is the ultimate sophistication." — Khamare Clarke',
-        '"Your thoughts become your reality." — Khamare Clarke',
-        
-        // Additional Historical Figures
-        '"The time for action is now. It\'s never too late to do something." — Antoine de Saint-Exupéry',
-        '"I have learned throughout my life as a composer chiefly through my mistakes and pursuits of false assumptions." — Igor Stravinsky',
-        '"The thing to do is to supply light and not heat." — Woodrow Wilson',
-        '"If you want to go fast, go alone. If you want to go far, go together." — African Proverb',
-        '"It takes a village to raise a child." — African Proverb',
-        '"When the roots of a tree begin to decay, it spreads death to the branches." — Aeschylus',
-        '"The best revenge is massive success." — Frank Sinatra',
-        '"Whether you think you can or you think you can\'t, you\'re right." — Henry Ford',
+        // Business & Success Leaders
+        '"The best time to plant a tree was 20 years ago. The second best time is now." — Chinese Proverb',
+        '"Whether you think you can or you can\'t, you\'re right." — Henry Ford',
+        '"Success is not final, failure is not fatal: courage to continue counts." — Winston Churchill',
         '"The only impossible journey is the one you never begin." — Tony Robbins',
-        '"Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill'
+        '"Don\'t be afraid to give up the good to go for the great." — John D. Rockefeller',
+        
+        // Athletes & Champions
+        '"Champions train, losers complain." — Muhammad Ali',
+        '"I can accept failure, but I can\'t accept not trying." — Michael Jordan',
+        '"Be like water." — Bruce Lee',
+        '"The will to win means nothing without the will to prepare." — Juma Ikangaa',
+        '"You miss 100% of the shots you don\'t take." — Wayne Gretzky',
+        
+        // Historical Leaders (Balanced Selection)
+        '"The future belongs to those who prepare for it today." — Malcolm X',
+        '"If you have no confidence in self, you are twice defeated." — Marcus Garvey',
+        '"Education is the most powerful weapon." — Nelson Mandela',
+        '"Strength does not come from physical capacity." — Mahatma Gandhi',
+        '"The only thing we have to fear is fear itself." — Franklin D. Roosevelt',
+        
+        // Khamare Clarke Original Quotes (Shorter & More Relevant)
+        '"Systems create freedom." — Khamare Clarke',
+        '"What gets measured gets mastered." — Khamare Clarke',
+        '"Discipline bridges goals and accomplishment." — Khamare Clarke',
+        '"Progress, not perfection." — Khamare Clarke',
+        '"Focus is knowing what to ignore." — Khamare Clarke',
+        '"Consistency compounds." — Khamare Clarke',
+        '"Daily choices become destiny." — Khamare Clarke',
+        '"Excellence is systematic." — Khamare Clarke',
+        '"Leverage amplifies effort." — Khamare Clarke',
+        '"Masters fail more than beginners try." — Khamare Clarke',
+        '"Reflection creates wisdom." — Khamare Clarke',
+        '"Principles guide practices." — Khamare Clarke',
+        '"Success is systematic." — Khamare Clarke',
+        '"Do it right once." — Khamare Clarke',
+        '"Excellence attracts excellence." — Khamare Clarke',
+        '"Goals need timelines." — Khamare Clarke',
+        '"Execute or hallucinate." — Khamare Clarke',
+        '"Prepare for tomorrow today." — Khamare Clarke',
+        '"Mastery requires practice." — Khamare Clarke',
+        '"Environment shapes behavior." — Khamare Clarke',
+        '"Small choices, big results." — Khamare Clarke',
+        '"Vision needs action." — Khamare Clarke',
+        '"Commitment creates accomplishment." — Khamare Clarke',
+        '"Questions determine quality." — Khamare Clarke',
+        '"Courage plus consistency." — Khamare Clarke',
+        '"Network equals net worth." — Khamare Clarke',
+        '"Habits compound interest." — Khamare Clarke',
+        '"Systems over goals." — Khamare Clarke',
+        '"Plant trees today." — Khamare Clarke',
+        '"Clarity precedes mastery." — Khamare Clarke',
+        '"Identity shapes actions." — Khamare Clarke',
+        '"Momentum drives achievement." — Khamare Clarke',
+        '"Practice makes permanent." — Khamare Clarke',
+        '"Success leaves clues." — Khamare Clarke',
+        '"Mornings set the tone." — Khamare Clarke',
+        '"Constraints create creativity." — Khamare Clarke',
+        '"Obstacles become the way." — Khamare Clarke',
+        '"Feedback fuels champions." — Khamare Clarke',
+        '"Simplicity is sophistication." — Khamare Clarke',
+        '"Thoughts become reality." — Khamare Clarke',
+        '"Time amplifies everything." — Khamare Clarke',
+        '"Standards create results." — Khamare Clarke',
+        '"Intensity beats intelligence." — Khamare Clarke',
+        '"Execution trumps perfection." — Khamare Clarke',
+        '"Momentum multiplies effort." — Khamare Clarke',
+        '"Clarity creates confidence." — Khamare Clarke',
+        '"Persistence pays compound interest." — Khamare Clarke',
+        '"Systems scale success." — Khamare Clarke',
+        '"Habits automate excellence." — Khamare Clarke',
+        '"Focus filters distractions." — Khamare Clarke',
+        '"Preparation prevents poor performance." — Khamare Clarke'
     ];
     
     // Ensure we have enough quotes for 90 days
