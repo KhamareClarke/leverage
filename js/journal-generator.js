@@ -993,33 +993,33 @@ function generateRewardCheckpoint(day, pageNumber) {
     
     return `
     <!-- ${day}-DAY REWARD CHECKPOINT -->
-    <div class="page reward-checkpoint flex flex-col items-center justify-center">
-        <div class="celebration-icon mb-8">
+    <div class="page reward-checkpoint" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <div class="celebration-icon" style="margin-bottom: 2rem;">
             <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">
                 ${checkpoint.celebration}
             </div>
         </div>
         
-        <h1 class="gold-gradient text-center mb-6" style="font-size: 2.2rem; font-family: 'Cormorant Garamond', serif;">
+        <h1 class="gold-gradient" style="font-size: 2.2rem; font-family: 'Cormorant Garamond', serif; text-align: center; margin-bottom: 1.5rem;">
             ${checkpoint.title}
         </h1>
         
-        <div class="gold-line mb-8" style="width: 300px;"></div>
+        <div class="gold-line" style="width: 300px; height: 2px; background: var(--gold); margin: 0 auto 2rem;"></div>
         
-        <div class="checkpoint-message" style="background: var(--black-card); padding: 2rem; border-radius: 12px; border: 2px solid var(--gold); text-align: center; max-width: 500px; margin-bottom: 2rem;">
-            <p style="color: var(--gray-light); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+        <div class="checkpoint-message" style="background: var(--black-card); padding: 2rem; border-radius: 12px; border: 2px solid var(--gold); text-align: center; max-width: 400px; margin-bottom: 2rem;">
+            <p style="color: var(--gray-light); font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
                 ${checkpoint.message}
             </p>
             
-            <div style="background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%); color: var(--black); padding: 1rem; border-radius: 8px; font-weight: 700; font-size: 1rem;">
+            <div style="background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%); color: var(--black); padding: 1rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem;">
                 ${checkpoint.reward}
             </div>
         </div>
         
-        <div class="signature-section text-center" style="max-width: 400px; margin-bottom: 2rem;">
-            <p style="color: var(--gold); margin-bottom: 1rem; font-size: 1rem;">Sign your name to claim this achievement:</p>
-            <div style="border-bottom: 3px solid var(--gold); width: 300px; height: 2rem; margin: 0 auto 0.5rem;"></div>
-            <p style="color: var(--gray); font-size: 0.9rem;">Your Signature</p>
+        <div class="signature-section" style="text-align: center; margin-bottom: 2rem;">
+            <p style="color: var(--gold); margin-bottom: 1rem; font-size: 0.9rem;">Sign your name to claim this achievement:</p>
+            <div style="border-bottom: 3px solid var(--gold); width: 280px; height: 1.5rem; margin: 0 auto 0.5rem;"></div>
+            <p style="color: var(--gray); font-size: 0.8rem;">Your Signature</p>
         </div>
         
         <div class="page-number">${pageNumber}</div>
