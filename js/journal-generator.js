@@ -7,24 +7,37 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function generateMasterJournal() {
-    const container = document.getElementById('journal-content');
+    // Create a temporary container to hold all pages
+    const tempContainer = document.createElement('div');
     
-    let html = '';
+    // Generate all sections in order
+    tempContainer.innerHTML = 
+        generateChapter1Vision() +
+        generateChapter1VisionComplete() +
+        generateChapter2Plan() +
+        generateChapter3Do() +
+        generateChapter4Review() +
+        generateChapter5Legacy() +
+        generateBackMatter() +
+        generateBackCover();
     
-    // Generate all sections in order (removed duplicates)
-    html += generateChapter1Vision();
-    html += generateChapter1VisionComplete();
-    html += generateChapter2Plan();
-    html += generateChapter3Do();
-    html += generateChapter4Review();
-    html += generateChapter5Legacy();
-    html += generateBackMatter();
-    html += generateBackCover();
+    // Get the main container
+    const mainContainer = document.getElementById('journal-content');
+    if (!mainContainer) {
+        console.error('Could not find journal-content element');
+        return;
+    }
     
-    container.innerHTML = html;
+    // Clear existing content and append new content
+    mainContainer.innerHTML = '';
+    while (tempContainer.firstChild) {
+        mainContainer.appendChild(tempContainer.firstChild);
+    }
     
     // Initialize interactive elements
     initializeInteractiveElements();
+    
+    console.log('Journal content generated successfully');
 }
 
 // FRONT MATTER GENERATION - REMOVED TO ELIMINATE DUPLICATES
