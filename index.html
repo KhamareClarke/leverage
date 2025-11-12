@@ -296,7 +296,16 @@
 <div id="journal-content"></div>
 
 <!-- Load JavaScript -->
-<script src="js/journal-generator.js"></script>
+<script src="./js/journal-generator.js"></script>
+<script>
+// Fallback if external JS fails to load
+setTimeout(function() {
+    if (!document.querySelector('.daily-page')) {
+        console.error('JavaScript failed to load - pages not generated');
+        document.getElementById('journal-content').innerHTML = '<div style="color: red; text-align: center; padding: 2rem;">Error: JavaScript file failed to load. Please refresh the page.</div>';
+    }
+}, 3000);
+</script>
 <!-- Updated: 2025-11-12 -->
 </body>
 </html>
