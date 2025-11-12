@@ -204,7 +204,7 @@ function generateChapter1VisionComplete() {
             <div class="timeline-section" style="background: var(--black-card); padding: 0.4rem; border-radius: 6px; border-left: 4px solid #FFD700;">
                 <h3 style="color: #FFD700; margin-bottom: 0.1rem; display: flex; align-items: center; font-size: 0.75rem;">
                     <span style="font-size: 0.8rem; margin-right: 0.2rem;">🎯</span>
-                    STRATEGIC (2-5 Years)
+                    STRATEGIC
                 </h3>
                 <p style="color: var(--gray); font-size: 0.65rem; margin-bottom: 0.2rem;">Major milestones for your vision.</p>
                 <div class="goal-lines">
@@ -600,7 +600,7 @@ function generateChapter2Plan() {
         </div>
         
         <div class="page-number">017</div>
-        <div class="footer-wisdom">"The most dangerous person is the one who listens, thinks and observes." — Bruce Lee</div>
+        <div class="footer-wisdom">"Be like water." — Bruce Lee</div>
     </div>`;
 }
 // UNIQUE QUOTE SYSTEM FOR DAILY PAGES - BALANCED GLOBAL LEADERS
@@ -611,28 +611,28 @@ function getDailyQuote(day) {
         '"Know yourself and you will win all battles." — Sun Tzu',
         '"I came, I saw, I conquered." — Julius Caesar',
         '"Fortune favors the bold." — Alexander the Great',
-        '"In war, the way is to avoid what is strong and to strike at what is weak." — Sun Tzu',
+        '"Strike at weakness." — Sun Tzu',
         
         // Philosophers & Ancient Wisdom
-        '"We are what we repeatedly do. Excellence is not an act, but a habit." — Aristotle',
+        '"Excellence is a habit." — Aristotle',
         '"The unexamined life is not worth living." — Socrates',
         '"Quality is not an act, it is a habit." — Aristotle',
-        '"It does not matter how slowly you go as long as you do not stop." — Confucius',
-        '"The man who moves a mountain begins by carrying away small stones." — Confucius',
+        '"Never stop moving forward." — Confucius',
+        '"Start with small stones." — Confucius',
         
         // Scientists & Innovators
-        '"Genius is one percent inspiration, ninety-nine percent perspiration." — Thomas Edison',
+        '"Genius is perspiration." — Thomas Edison',
         '"In the middle of difficulty lies opportunity." — Albert Einstein',
         '"The way to get started is to quit talking and begin doing." — Walt Disney',
         '"Innovation distinguishes between a leader and a follower." — Steve Jobs',
         '"Stay hungry, stay foolish." — Steve Jobs',
         
         // Business & Success Leaders
-        '"The best time to plant a tree was 20 years ago. The second best time is now." — Chinese Proverb',
+        '"Plant trees today." — Chinese Proverb',
         '"Whether you think you can or you can\'t, you\'re right." — Henry Ford',
-        '"Success is not final, failure is not fatal: courage to continue counts." — Winston Churchill',
+        '"Courage to continue counts." — Winston Churchill',
         '"The only impossible journey is the one you never begin." — Tony Robbins',
-        '"Don\'t be afraid to give up the good to go for the great." — John D. Rockefeller',
+        '"Give up good for great." — John D. Rockefeller',
         
         // Athletes & Champions
         '"Champions train, losers complain." — Muhammad Ali',
@@ -715,12 +715,12 @@ function getWeeklyQuote(week) {
         "Experience is the teacher of all things. — Julius Caesar",
         "Learning never exhausts the mind. — Leonardo da Vinci",
         "The only source of knowledge is experience. — Albert Einstein",
-        "Wisdom comes from experience, and experience comes from bad judgment. — Mark Twain",
+        "Experience teaches wisdom. — Mark Twain",
         "In learning you will teach, and in teaching you will learn. — Phil Collins",
-        "The beautiful thing about learning is that no one can take it away from you. — B.B. King",
-        "Live as if you were to die tomorrow. Learn as if you were to live forever. — Mahatma Gandhi",
-        "Tell me and I forget, teach me and I may remember, involve me and I learn. — Benjamin Franklin",
-        "The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice. — Brian Herbert",
+        "Learning stays with you. — B.B. King",
+        "Live today, learn forever. — Mahatma Gandhi",
+        "Involvement creates learning. — Benjamin Franklin",
+        "Learning is a choice. — Brian Herbert",
         "Success is the sum of small efforts repeated day in and day out. — Robert Collier"
     ];
     
@@ -1428,7 +1428,7 @@ function generateChapter5Legacy() {
         </div>
         
         <div class="page-number">126</div>
-        <div class="footer-wisdom" style="font-size: 0.75rem;">"The best way to find out if you can trust somebody is to trust them." — Ernest Hemingway</div>
+        <div class="footer-wisdom" style="font-size: 0.75rem;">"Trust to discover trust." — Ernest Hemingway</div>
     </div>`;
 }
 // BACK MATTER
@@ -1646,7 +1646,7 @@ function generateBackMatter() {
         </div>
         
         <div class="page-number">129</div>
-        <div class="footer-wisdom" style="font-size: 0.65rem;">"The ultimate measure of a man is not where he stands in moments of comfort, but where he stands at times of challenge." — Martin Luther King Jr.</div>
+        <div class="footer-wisdom" style="font-size: 0.65rem;">"Character shows in challenges." — Martin Luther King Jr.</div>
     </div>`;
 }
 
