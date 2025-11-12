@@ -1211,9 +1211,14 @@ p {
 
 /* Reward Checkpoint Pages */
 .reward-checkpoint {
-    background: linear-gradient(135deg, var(--black-soft) 0%, var(--black-card) 100%);
+    background: var(--black) !important;
     text-align: center;
-    padding: 2rem;
+    margin: 1rem auto !important;
+    width: 148mm !important;
+    height: 210mm !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .reward-checkpoint .section-icon {
