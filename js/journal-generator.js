@@ -202,9 +202,9 @@ function generateChapter1VisionComplete() {
             
             <!-- 2-5 Year Strategic Goals -->
             <div class="timeline-section" style="background: var(--black-card); padding: 0.4rem; border-radius: 6px; border-left: 4px solid #FFD700;">
-                <h3 style="color: #FFD700; margin-bottom: 0.1rem; display: flex; align-items: center; font-size: 0.75rem;">
-                    <span style="font-size: 0.8rem; margin-right: 0.2rem;">🎯</span>
-                    STRATEGIC
+                <h3 style="color: #FFD700; margin-bottom: 0.1rem; display: flex; align-items: center; font-size: 0.7rem;">
+                    <span style="font-size: 0.75rem; margin-right: 0.2rem;">🎯</span>
+                    STRATEGIC (2-5 Years)
                 </h3>
                 <p style="color: var(--gray); font-size: 0.65rem; margin-bottom: 0.2rem;">Major milestones for your vision.</p>
                 <div class="goal-lines">
