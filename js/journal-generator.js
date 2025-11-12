@@ -970,19 +970,22 @@ function generateRewardCheckpoint(day, pageNumber) {
             title: "30-DAY MILESTONE",
             message: "You've built the foundation of transformation. The first 30 days are the hardest—you've proven you can do this.",
             celebration: "🎉 🏆 🎉",
-            reward: "You've earned the right to call yourself disciplined."
+            reward: "You've earned the right to call yourself disciplined.",
+            quote: "Discipline is the bridge between goals and accomplishment."
         },
         60: {
             title: "60-DAY POWERHOUSE", 
             message: "You're no longer the person who started this journey. You've developed systems, habits, and momentum that compound daily.",
             celebration: "🚀 ⭐ 🚀",
-            reward: "You've earned the right to call yourself unstoppable."
+            reward: "You've earned the right to call yourself unstoppable.",
+            quote: "Systems create freedom. Habits create leverage."
         },
         90: {
             title: "90-DAY DIGITAL ALCHEMIST",
             message: "You have completed something extraordinary. You are now among the 8% who finish what they start. You are a Digital Alchemist.",
             celebration: "👑 💎 👑", 
-            reward: "You've earned the right to call yourself a master."
+            reward: "You've earned the right to call yourself a master.",
+            quote: "What gets measured gets mastered."
         }
     };
     
@@ -990,37 +993,37 @@ function generateRewardCheckpoint(day, pageNumber) {
     
     return `
     <!-- ${day}-DAY REWARD CHECKPOINT -->
-    <div class="page reward-checkpoint flex flex-col items-center justify-center" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <div class="celebration-icon mb-8" style="text-align: center; width: 100%;">
-            <div style="font-size: 3rem; text-align: center; margin-bottom: 1.5rem;">
+    <div class="page reward-checkpoint" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 1rem;">
+        <div class="celebration-icon" style="margin-bottom: 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">
                 ${checkpoint.celebration}
             </div>
         </div>
         
-        <h1 class="gold-gradient text-center mb-6" style="font-size: 2.2rem; font-family: var(--font-serif); text-align: center; width: 100%;">
+        <h1 class="gold-gradient" style="font-size: 2.2rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 1.5rem; text-align: center;">
             ${checkpoint.title}
         </h1>
         
-        <div class="gold-line mb-8" style="width: 300px; margin: 0 auto;"></div>
+        <div class="gold-line" style="width: 300px; height: 2px; background: var(--gold); margin: 0 auto 2rem;"></div>
         
-        <div class="checkpoint-message" style="background: var(--black-card); padding: 2rem; border-radius: 12px; border: 2px solid var(--gold); text-align: center; max-width: 500px; width: 100%; margin: 0 auto 2rem;">
-            <p style="color: var(--gray-light); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; text-align: center;">
+        <div class="checkpoint-message" style="background: var(--black-card); padding: 2rem; border-radius: 12px; border: 2px solid var(--gold); max-width: 500px; margin-bottom: 2rem;">
+            <p style="color: var(--gray-light); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
                 ${checkpoint.message}
             </p>
             
-            <div style="background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%); color: var(--black); padding: 1rem; border-radius: 8px; font-weight: 700; font-size: 1rem; text-align: center;">
+            <div style="background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%); color: var(--black); padding: 1rem; border-radius: 8px; font-weight: 700; font-size: 1rem;">
                 ${checkpoint.reward}
             </div>
         </div>
         
-        <div class="signature-section" style="text-align: center; width: 100%; max-width: 500px; margin: 0 auto;">
-            <p style="color: var(--gold); margin-bottom: 0.8rem; font-size: 1rem; text-align: center;">Sign your name to claim this achievement:</p>
-            <div style="border-bottom: 2px solid var(--gold); width: 280px; height: 1.5rem; margin: 0 auto;"></div>
-            <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.6rem; text-align: center;">Your Signature</p>
+        <div class="signature-section" style="max-width: 400px; margin-bottom: 3rem;">
+            <p style="color: var(--gold); margin-bottom: 1rem; font-size: 1rem;">Sign your name to claim this achievement:</p>
+            <div style="border-bottom: 3px solid var(--gold); width: 300px; height: 2rem; margin: 0 auto 0.5rem;"></div>
+            <p style="color: var(--gray); font-size: 0.9rem;">Your Signature</p>
         </div>
         
-        <div class="page-number">${pageNumber}</div>
-        <div class="footer-wisdom">"Every master was once a beginner. Every pro was once an amateur." — Robin Sharma</div>
+        <div class="page-number" style="position: absolute; bottom: 20px; right: 20px; color: var(--gold); font-weight: bold;">${pageNumber}</div>
+        <div class="footer-wisdom" style="position: absolute; bottom: 20px; left: 20px; right: 80px; color: var(--gray); font-size: 0.7rem; font-style: italic;">"${checkpoint.quote}" — Khamare Clarke</div>
     </div>`;
 }
 // CHAPTER 4 - REVIEW

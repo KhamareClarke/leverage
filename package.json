@@ -9,7 +9,7 @@
     "start": "vite preview"
   },
   "keywords": [],
-  "author": "",
+  "author": "Khamare Clarke",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
