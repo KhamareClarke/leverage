@@ -993,20 +993,20 @@ function generateRewardCheckpoint(day, pageNumber) {
     
     return `
     <!-- ${day}-DAY REWARD CHECKPOINT -->
-    <div class="page reward-checkpoint" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 1rem;">
-        <div class="celebration-icon" style="margin-bottom: 2rem;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">
+    <div class="page reward-checkpoint flex flex-col items-center justify-center">
+        <div class="celebration-icon mb-8">
+            <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">
                 ${checkpoint.celebration}
             </div>
         </div>
         
-        <h1 class="gold-gradient" style="font-size: 2.2rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 1.5rem; text-align: center;">
+        <h1 class="gold-gradient text-center mb-6" style="font-size: 2.2rem; font-family: 'Cormorant Garamond', serif;">
             ${checkpoint.title}
         </h1>
         
-        <div class="gold-line" style="width: 300px; height: 2px; background: var(--gold); margin: 0 auto 2rem;"></div>
+        <div class="gold-line mb-8" style="width: 300px;"></div>
         
-        <div class="checkpoint-message" style="background: var(--black-card); padding: 2rem; border-radius: 12px; border: 2px solid var(--gold); max-width: 500px; margin-bottom: 2rem;">
+        <div class="checkpoint-message" style="background: var(--black-card); padding: 2rem; border-radius: 12px; border: 2px solid var(--gold); text-align: center; max-width: 500px; margin-bottom: 2rem;">
             <p style="color: var(--gray-light); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
                 ${checkpoint.message}
             </p>
@@ -1016,14 +1016,14 @@ function generateRewardCheckpoint(day, pageNumber) {
             </div>
         </div>
         
-        <div class="signature-section" style="max-width: 400px; margin-bottom: 3rem;">
+        <div class="signature-section text-center" style="max-width: 400px; margin-bottom: 2rem;">
             <p style="color: var(--gold); margin-bottom: 1rem; font-size: 1rem;">Sign your name to claim this achievement:</p>
             <div style="border-bottom: 3px solid var(--gold); width: 300px; height: 2rem; margin: 0 auto 0.5rem;"></div>
             <p style="color: var(--gray); font-size: 0.9rem;">Your Signature</p>
         </div>
         
-        <div class="page-number" style="position: absolute; bottom: 20px; right: 20px; color: var(--gold); font-weight: bold;">${pageNumber}</div>
-        <div class="footer-wisdom" style="position: absolute; bottom: 20px; left: 20px; right: 80px; color: var(--gray); font-size: 0.7rem; font-style: italic;">"${checkpoint.quote}" — Khamare Clarke</div>
+        <div class="page-number">${pageNumber}</div>
+        <div class="footer-wisdom">"${checkpoint.quote}" — Khamare Clarke</div>
     </div>`;
 }
 // CHAPTER 4 - REVIEW
