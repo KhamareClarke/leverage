@@ -35,77 +35,170 @@
     --space-3xl: 4rem;
 }
 
-/* PRINT-READY: WHITE CONTENT PAGES, BLACK COVERS */
+/* ULTIMATE BLACK & WHITE OVERRIDE - NUCLEAR OPTION */
 @media print, screen {
-    /* White background for all interior pages (exclude covers) */
-    .page:not(.cover-page) {
+    /* FORCE WHITE BACKGROUNDS ON ALL PAGES EXCEPT COVERS */
+    .page:not(.cover-page):not(.title-page) {
         background: white !important;
+        background-color: white !important;
+        background-image: none !important;
+    }
+    
+    /* FORCE BLACK TEXT ON WHITE BACKGROUNDS */
+    .page:not(.cover-page):not(.title-page) * {
         color: black !important;
     }
     
-    /* Convert ALL gold text to black */
-    .page:not(.cover-page) .gold-gradient,
-    .page:not(.cover-page) [style*="color: var(--gold)"],
-    .page:not(.cover-page) [style*="color: #FFD700"],
-    .page:not(.cover-page) [style*="color: var(--gold-light)"],
-    .page:not(.cover-page) [style*="color: var(--gold-metallic)"],
-    .page:not(.cover-page) [style*="color: var(--gold-dark)"] {
+    /* EXCEPTION: Allow white text on ANY colored backgrounds */
+    .page:not(.cover-page):not(.title-page) [style*="background: #"]:not([style*="background: #fff"]):not([style*="background: #ffffff"]) *,
+    .page:not(.cover-page):not(.title-page) [style*="background-color: #"]:not([style*="background-color: #fff"]):not([style*="background-color: #ffffff"]) *,
+    .page:not(.cover-page):not(.title-page) [style*="background: rgb"]:not([style*="background: rgb(255"]) *,
+    .page:not(.cover-page):not(.title-page) [style*="background-color: rgb"]:not([style*="background-color: rgb(255"]) * {
+        color: white !important;
+    }
+    
+    /* Specific classes that might have colored backgrounds */
+    .page:not(.cover-page):not(.title-page) .highlight,
+    .page:not(.cover-page):not(.title-page) .badge,
+    .page:not(.cover-page):not(.title-page) .tag,
+    .page:not(.cover-page):not(.title-page) .button,
+    .page:not(.cover-page):not(.title-page) .btn {
+        color: white !important;
+    }
+    
+    /* Force white text on elements with non-white backgrounds */
+    .page:not(.cover-page):not(.title-page) [class*="bg-"]:not([class*="bg-white"]) *,
+    .page:not(.cover-page):not(.title-page) [class*="background"]:not([class*="white"]) * {
+        color: white !important;
+    }
+    /* FORCE white background on ALL pages except covers and title */
+    .page:not(.cover-page):not(.title-page) {
+        background: white !important;
+        background-color: white !important;
+        background-image: none !important;
+    }
+    
+    .page:not(.cover-page):not(.title-page) * {
+        background: white !important;
+        background-color: white !important;
+        background-image: none !important;
+    }
+    
+    /* NUCLEAR TEXT OVERRIDE - Force ALL text to black */
+    .page:not(.cover-page):not(.title-page) *,
+    .page.dedication-page *,
+    .page.chapter-divider * {
         color: black !important;
     }
     
-    /* Convert all grey text to black for better readability */
-    .page:not(.cover-page) [style*="color: var(--gray)"],
-    .page:not(.cover-page) [style*="color: var(--gray-light)"],
-    .page:not(.cover-page) [style*="color: var(--gray-dark)"] {
+    /* Specific overrides for problematic elements */
+    .dedication-page .gold-gradient,
+    .dedication-page h1,
+    .chapter-divider .gold-gradient,
+    .chapter-divider h1,
+    .chapter-divider h2 {
         color: black !important;
+        background: transparent !important;
     }
     
-    /* Light grey containers for cards and sections */
-    .page:not(.cover-page) [style*="background: var(--black-card)"],
-    .page:not(.cover-page) [style*="background: var(--black)"],
-    .page:not(.cover-page) [style*="background: var(--gray-dark)"] {
-        background: #f0f0f0 !important;
-        color: black !important;
+    /* FORCE override gold lines */
+    .page:not(.cover-page):not(.title-page) .gold-line {
+        background: black !important;
+        background-color: black !important;
+        height: 2px !important;
+        width: 200px !important;
     }
     
-    /* Convert borders to dark grey */
-    .page:not(.cover-page) [style*="border-left: 4px solid var(--gold)"],
-    .page:not(.cover-page) [style*="border: 2px solid var(--gold)"] {
-        border-color: #333333 !important;
-    }
-    
-    .page:not(.cover-page) [style*="border-bottom: 1px solid var(--gray-dark)"] {
-        border-color: #cccccc !important;
-    }
-    
-    /* Convert gold backgrounds to light gray */
-    .page:not(.cover-page) [style*="background: var(--gold)"] {
-        background: #e8e8e8 !important;
-        color: black !important;
-    }
-    
-    /* Icons: Convert to black and white */
-    .page:not(.cover-page) svg [stroke="var(--gold)"] {
+    /* FORCE all SVG icons to black and white */
+    .page:not(.cover-page):not(.title-page) svg,
+    .page:not(.cover-page):not(.title-page) svg *,
+    .page:not(.cover-page):not(.title-page) svg path,
+    .page:not(.cover-page):not(.title-page) svg circle,
+    .page:not(.cover-page):not(.title-page) svg rect {
         stroke: black !important;
+        fill: transparent !important;
+        color: black !important;
+        opacity: 1 !important;
     }
     
-    .page:not(.cover-page) svg [fill="var(--gold)"] {
-        fill: black !important;
-    }
-    
-    /* Ensure page numbers and footer text are black */
-    .page:not(.cover-page) .page-number,
-    .page:not(.cover-page) .footer-wisdom {
+    /* Light grey containers for specific sections */
+    .page:not(.cover-page):not(.title-page) [style*="background: var(--black-card)"],
+    .page:not(.cover-page):not(.title-page) [style*="background: var(--black)"],
+    .page:not(.cover-page):not(.title-page) [style*="background: linear-gradient"] {
+        background: #f0f0f0 !important;
+        background-color: #f0f0f0 !important;
+        background-image: none !important;
         color: black !important;
     }
     
-    /* Chapter divider pages also get white background */
-    .page.chapter-divider:not(.cover-page) {
+    /* Override all CSS variables globally for interior pages */
+    .page:not(.cover-page):not(.title-page) {
+        --gold: black;
+        --gold-light: black;
+        --gold-dark: black;
+        --gold-metallic: black;
+        --black: white;
+        --black-soft: #f0f0f0;
+        --black-card: #f0f0f0;
+        --gray: #666666;
+        --gray-light: #666666;
+        --gray-dark: black;
+        --white: black;
+    }
+    
+    /* FORCE specific problem elements */
+    .page:not(.cover-page):not(.title-page) [style*="color: var(--gold)"],
+    .page:not(.cover-page):not(.title-page) [style*="color: var(--gold-light)"],
+    .page:not(.cover-page):not(.title-page) [style*="color: var(--gold-dark)"] {
+        color: black !important;
+    }
+    
+    .page:not(.cover-page):not(.title-page) [style*="background: var(--gold)"] {
+        background: #f0f0f0 !important;
+        background-color: #f0f0f0 !important;
+    }
+    
+    /* Remove any remaining gradients or special backgrounds */
+    .page:not(.cover-page):not(.title-page) [class*="gradient"] {
+        background: transparent !important;
+        background-image: none !important;
+        color: black !important;
+    }
+    
+    /* QR codes - force black and white */
+    .page:not(.cover-page):not(.title-page) [class*="qr"] {
         background: white !important;
+        background-color: white !important;
     }
     
-    .page.chapter-divider:not(.cover-page) * {
+    /* Chapter dividers specific override */
+    .chapter-divider:not(.cover-page):not(.title-page) {
+        background: white !important;
+        background-color: white !important;
+    }
+    
+    .chapter-divider:not(.cover-page):not(.title-page) *,
+    .chapter-divider:not(.cover-page):not(.title-page) h1,
+    .chapter-divider:not(.cover-page):not(.title-page) h2,
+    .chapter-divider:not(.cover-page):not(.title-page) p,
+    .chapter-divider:not(.cover-page):not(.title-page) span {
         color: black !important;
+        background: white !important;
+        background-color: white !important;
+    }
+    
+    /* FORCE chapter divider text to be visible */
+    .chapter-divider:not(.cover-page):not(.title-page) [style*="color: var(--gray-light)"],
+    .chapter-divider:not(.cover-page):not(.title-page) [style*="color: var(--gray)"],
+    .chapter-divider:not(.cover-page):not(.title-page) .gold-gradient {
+        color: black !important;
+    }
+    
+    /* FORCE chapter divider icons to black */
+    .chapter-divider:not(.cover-page):not(.title-page) svg,
+    .chapter-divider:not(.cover-page):not(.title-page) svg * {
+        stroke: black !important;
+        fill: transparent !important;
     }
 }
 
@@ -172,6 +265,30 @@ body {
 .page.cover-page {
     background: var(--black);
     color: var(--white);
+}
+
+/* Title page styling - ensure all text is white */
+.page.title-page {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+.page.title-page *,
+.page.title-page h1,
+.page.title-page h2,
+.page.title-page p,
+.page.title-page div {
+    color: var(--white) !important;
+}
+
+.page.title-page .gold-gradient {
+    color: var(--white) !important;
+}
+
+/* Override specific inline styles on title page */
+.page.title-page [style*="color: var(--gray-light)"],
+.page.title-page [style*="color: var(--gray)"] {
+    color: var(--white) !important;
 }
 
 /* SPREAD LAYOUT (Two pages side by side) */
