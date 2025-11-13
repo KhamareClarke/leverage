@@ -35,28 +35,77 @@
     --space-3xl: 4rem;
 }
 
-/* PRINT-READY BLACK & WHITE OVERRIDE FOR INTERIOR PAGES */
+/* PRINT-READY: WHITE CONTENT PAGES, BLACK COVERS */
 @media print, screen {
-    /* Convert all interior pages to black & white (exclude covers) */
+    /* White background for all interior pages (exclude covers) */
+    .page:not(.cover-page) {
+        background: white !important;
+        color: black !important;
+    }
+    
+    /* Convert ALL gold text to black */
     .page:not(.cover-page) .gold-gradient,
     .page:not(.cover-page) [style*="color: var(--gold)"],
     .page:not(.cover-page) [style*="color: #FFD700"],
     .page:not(.cover-page) [style*="color: var(--gold-light)"],
     .page:not(.cover-page) [style*="color: var(--gold-metallic)"],
     .page:not(.cover-page) [style*="color: var(--gold-dark)"] {
-        color: var(--gray-dark) !important;
+        color: black !important;
     }
     
-    /* Convert gold borders to gray */
+    /* Convert all grey text to black for better readability */
+    .page:not(.cover-page) [style*="color: var(--gray)"],
+    .page:not(.cover-page) [style*="color: var(--gray-light)"],
+    .page:not(.cover-page) [style*="color: var(--gray-dark)"] {
+        color: black !important;
+    }
+    
+    /* Light grey containers for cards and sections */
+    .page:not(.cover-page) [style*="background: var(--black-card)"],
+    .page:not(.cover-page) [style*="background: var(--black)"],
+    .page:not(.cover-page) [style*="background: var(--gray-dark)"] {
+        background: #f0f0f0 !important;
+        color: black !important;
+    }
+    
+    /* Convert borders to dark grey */
     .page:not(.cover-page) [style*="border-left: 4px solid var(--gold)"],
     .page:not(.cover-page) [style*="border: 2px solid var(--gold)"] {
-        border-color: var(--gray-dark) !important;
+        border-color: #333333 !important;
+    }
+    
+    .page:not(.cover-page) [style*="border-bottom: 1px solid var(--gray-dark)"] {
+        border-color: #cccccc !important;
     }
     
     /* Convert gold backgrounds to light gray */
     .page:not(.cover-page) [style*="background: var(--gold)"] {
-        background: var(--gray-light) !important;
-        color: var(--black) !important;
+        background: #e8e8e8 !important;
+        color: black !important;
+    }
+    
+    /* Icons: Convert to black and white */
+    .page:not(.cover-page) svg [stroke="var(--gold)"] {
+        stroke: black !important;
+    }
+    
+    .page:not(.cover-page) svg [fill="var(--gold)"] {
+        fill: black !important;
+    }
+    
+    /* Ensure page numbers and footer text are black */
+    .page:not(.cover-page) .page-number,
+    .page:not(.cover-page) .footer-wisdom {
+        color: black !important;
+    }
+    
+    /* Chapter divider pages also get white background */
+    .page.chapter-divider:not(.cover-page) {
+        background: white !important;
+    }
+    
+    .page.chapter-divider:not(.cover-page) * {
+        color: black !important;
     }
 }
 
@@ -105,7 +154,8 @@ body {
     height: 210mm;
     min-height: 210mm;
     max-height: 210mm;
-    background: var(--black);
+    background: white;
+    color: black;
     padding: 12mm;
     margin: 1rem auto;
     position: relative;
@@ -116,6 +166,12 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     overflow: hidden;
     box-sizing: border-box;
+}
+
+/* Cover pages keep dark styling */
+.page.cover-page {
+    background: var(--black);
+    color: var(--white);
 }
 
 /* SPREAD LAYOUT (Two pages side by side) */
