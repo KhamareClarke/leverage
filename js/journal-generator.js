@@ -99,13 +99,42 @@ function generateChapter1Vision() {
             <span class="gold-gradient font-semibold">Every clarity begins with focus.</span>
         </p>
         
-        <div class="qr-enhanced">
+        <div class="qr-code" style="text-align: center; margin: 1rem 0;">
             <svg width="80" height="80" viewBox="0 0 80 80" fill="var(--black)">
-                <rect width="80" height="80" fill="var(--black)" rx="4"/>
-                <rect x="10" y="10" width="60" height="60" fill="none" stroke="var(--gold)" stroke-width="2"/>
-                <text x="40" y="45" text-anchor="middle" fill="var(--gold)" font-size="8">QR_02</text>
+                <rect width="80" height="80" fill="white" rx="2"/>
+                <!-- QR Code Pattern for leveragejournal.com/vision -->
+                <rect x="4" y="4" width="16" height="16" fill="black"/>
+                <rect x="8" y="8" width="8" height="8" fill="white"/>
+                <rect x="60" y="4" width="16" height="16" fill="black"/>
+                <rect x="64" y="8" width="8" height="8" fill="white"/>
+                <rect x="4" y="60" width="16" height="16" fill="black"/>
+                <rect x="8" y="64" width="8" height="8" fill="white"/>
+                <!-- Data pattern -->
+                <rect x="24" y="8" width="4" height="4" fill="black"/>
+                <rect x="32" y="8" width="4" height="4" fill="black"/>
+                <rect x="44" y="8" width="4" height="4" fill="black"/>
+                <rect x="24" y="16" width="4" height="4" fill="black"/>
+                <rect x="36" y="16" width="4" height="4" fill="black"/>
+                <rect x="48" y="16" width="4" height="4" fill="black"/>
+                <rect x="28" y="24" width="4" height="4" fill="black"/>
+                <rect x="40" y="24" width="4" height="4" fill="black"/>
+                <rect x="52" y="24" width="4" height="4" fill="black"/>
+                <rect x="24" y="32" width="4" height="4" fill="black"/>
+                <rect x="36" y="32" width="4" height="4" fill="black"/>
+                <rect x="48" y="32" width="4" height="4" fill="black"/>
+                <rect x="32" y="40" width="4" height="4" fill="black"/>
+                <rect x="44" y="40" width="4" height="4" fill="black"/>
+                <rect x="56" y="40" width="4" height="4" fill="black"/>
+                <rect x="28" y="48" width="4" height="4" fill="black"/>
+                <rect x="40" y="48" width="4" height="4" fill="black"/>
+                <rect x="52" y="48" width="4" height="4" fill="black"/>
+                <rect x="24" y="56" width="4" height="4" fill="black"/>
+                <rect x="36" y="56" width="4" height="4" fill="black"/>
+                <rect x="48" y="56" width="4" height="4" fill="black"/>
+                <rect x="60" y="56" width="4" height="4" fill="black"/>
+                <rect x="68" y="56" width="4" height="4" fill="black"/>
             </svg>
-            <div class="qr-caption">Access Vision Board<br><code>leverage.app/vision</code></div>
+            <div class="qr-caption">Access Vision Board<br><code>leveragejournal.com/vision</code></div>
         </div>
         
         <div class="page-number">007</div>
@@ -583,47 +612,50 @@ function generateChapter2Plan() {
         <div class="page-number">016</div>
     </div>
     
-    <!-- PAGE 017: THE 12 LAWS OF LEVERAGE -->
+    <!-- PAGE 017: THE 7 LAWS OF LEVERAGE -->
     <div class="page">
         <div class="philosophy-section">
-            <h1 class="philosophy-title">The 12 Laws of Leverage</h1>
+            <h1 class="philosophy-title">The 7 Laws of Leverage</h1>
             
             <div class="philosophy-essay">
-                <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.75rem;">These twelve laws form the foundation of strategic thinking. Master them, and you master achieving maximum results with minimum effort.</p>
+                <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.75rem;">These seven laws form the foundation of strategic thinking. Master them, and you master achieving maximum results with minimum effort.</p>
                 
-                <div class="laws-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin: 1rem 0;">
+                <div class="laws-grid" style="display: grid; grid-template-columns: 1fr; gap: 0.6rem; margin: 1rem 0;">
                     <div class="law-item" style="background: var(--black-card); padding: 0.75rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">1. Compound Focus</h4>
-                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Small, consistent actions compound over time.</p>
+                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">1. The Law of Compound Focus</h4>
+                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Small, consistent actions compound exponentially over time. Focus creates force.</p>
                     </div>
                     
                     <div class="law-item" style="background: var(--black-card); padding: 0.75rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">2. Strategic Constraint</h4>
-                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Limitations create possibilities.</p>
+                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">2. The Law of Strategic Constraint</h4>
+                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Intelligent limitations create infinite possibilities. Constraints breed creativity.</p>
                     </div>
                     
                     <div class="law-item" style="background: var(--black-card); padding: 0.75rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">3. Momentum Multiplication</h4>
-                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Success accelerates through momentum.</p>
+                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">3. The Law of System Supremacy</h4>
+                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Systems beat goals every time. Build systems that work without you.</p>
                     </div>
                     
                     <div class="law-item" style="background: var(--black-card); padding: 0.75rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">4. System Supremacy</h4>
-                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Systems beat goals.</p>
+                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">4. The Law of Identity Transformation</h4>
+                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Change your identity, change your reality. Be before you do.</p>
                     </div>
                     
                     <div class="law-item" style="background: var(--black-card); padding: 0.75rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">5. Identity Transformation</h4>
-                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Change who you are.</p>
+                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">5. The Law of Environmental Design</h4>
+                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Shape your environment, shape your behavior. Design for success.</p>
                     </div>
                     
                     <div class="law-item" style="background: var(--black-card); padding: 0.75rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">6. Environmental Design</h4>
-                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Shape environment, shape behavior.</p>
+                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">6. The Law of Momentum Multiplication</h4>
+                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Success accelerates through momentum. Start small, build unstoppable force.</p>
+                    </div>
+                    
+                    <div class="law-item" style="background: var(--black-card); padding: 0.75rem; border-radius: 8px; border-left: 4px solid var(--gold);">
+                        <h4 style="color: var(--gold); margin-bottom: 0.3rem; font-size: 0.85rem;">7. The Law of Leverage Amplification</h4>
+                        <p style="color: var(--gray-light); font-size: 0.75rem; line-height: 1.3;">Find the fulcrum point. Small inputs, massive outputs through strategic leverage.</p>
                     </div>
                 </div>
-                
-                <p style="text-align: center; color: var(--gold-light); font-style: italic; font-size: 0.75rem;">The remaining six laws continue...</p>
             </div>
         </div>
         
@@ -811,7 +843,7 @@ function generateChapter3Do() {
                 <rect x="10" y="10" width="60" height="60" fill="none" stroke="var(--gold)" stroke-width="2"/>
                 <text x="40" y="45" text-anchor="middle" fill="var(--gold)" font-size="8">QR_04</text>
             </svg>
-            <div class="qr-caption">Sync with AI CoPilot<br><code>leverage.app/copilot</code></div>
+            <div class="qr-caption">Access Daily Tracker<br><code>leveragejournal.com/daily</code></div>
         </div>
         
         <div class="page-number">018</div>
@@ -1697,7 +1729,7 @@ function generateBackCover() {
         <div class="what-it-is" style="margin-bottom: 1rem;">
             <h3 style="color: var(--gold); font-size: 1rem; margin-bottom: 0.6rem; text-align: center;">What Is The Leverage Journal™?</h3>
             <p style="color: var(--gray-light); font-size: 0.8rem; line-height: 1.4; text-align: center;">
-                A complete <strong style="color: var(--gold-light);">240+ page transformation system</strong> that combines ancient wisdom with cutting-edge technology. This isn't just a journal—it's your personal empire-building headquarters.
+                A complete <strong style="color: var(--gold-light);">90-day transformation system</strong> that combines ancient wisdom with cutting-edge technology. This isn't just a journal—it's your personal empire-building headquarters.
             </p>
         </div>
         
@@ -1706,10 +1738,10 @@ function generateBackCover() {
             <h3 style="color: var(--gold); font-size: 0.95rem; margin-bottom: 0.6rem; text-align: center;">What You Get:</h3>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; font-size: 0.85rem;">
                 <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">90-Day Transformation System</strong></div>
-                <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">AI CoPilot Integration</strong></div>
-                <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">12 Laws of Leverage</strong></div>
+                <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">Digital Dashboard Synergy</strong></div>
+                <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">7 Laws of Leverage</strong></div>
                 <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">Builder's Guild Access</strong></div>
-                <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">Digital App Ecosystem</strong></div>
+                <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">Progress Analytics</strong></div>
                 <div style="color: var(--gray-light);">✓ <strong style="color: var(--gold-light);">Legacy Time Capsule</strong></div>
             </div>
         </div>

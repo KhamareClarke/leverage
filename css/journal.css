@@ -35,6 +35,31 @@
     --space-3xl: 4rem;
 }
 
+/* PRINT-READY BLACK & WHITE OVERRIDE FOR INTERIOR PAGES */
+@media print, screen {
+    /* Convert all interior pages to black & white (exclude covers) */
+    .page:not(.cover-page) .gold-gradient,
+    .page:not(.cover-page) [style*="color: var(--gold)"],
+    .page:not(.cover-page) [style*="color: #FFD700"],
+    .page:not(.cover-page) [style*="color: var(--gold-light)"],
+    .page:not(.cover-page) [style*="color: var(--gold-metallic)"],
+    .page:not(.cover-page) [style*="color: var(--gold-dark)"] {
+        color: var(--gray-dark) !important;
+    }
+    
+    /* Convert gold borders to gray */
+    .page:not(.cover-page) [style*="border-left: 4px solid var(--gold)"],
+    .page:not(.cover-page) [style*="border: 2px solid var(--gold)"] {
+        border-color: var(--gray-dark) !important;
+    }
+    
+    /* Convert gold backgrounds to light gray */
+    .page:not(.cover-page) [style*="background: var(--gold)"] {
+        background: var(--gray-light) !important;
+        color: var(--black) !important;
+    }
+}
+
 /* PAGE SETUP - A5 DIGITAL BOOK */
 @page {
     size: 148mm 210mm;
