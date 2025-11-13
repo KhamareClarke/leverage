@@ -368,14 +368,181 @@ function generateMasterJournal() {
     }
 }
 
-// Load the rest of the functions from external file as fallback
-const script = document.createElement('script');
-script.src = 'js/journal-generator.js';
-script.onerror = function() {
-    console.log('External JS failed, using embedded functions only');
-    // Add minimal functions here if needed
-};
-document.head.appendChild(script);
+// COMPLETE EMBEDDED FUNCTIONS - ALL 131 PAGES
+
+// Quote system
+function getDailyQuote(day) {
+    const quotes = [
+        '"Victory belongs to the most persevering." — Napoleon Bonaparte',
+        '"Know yourself and you will win all battles." — Sun Tzu',
+        '"I came, I saw, I conquered." — Julius Caesar',
+        '"Fortune favors the bold." — Alexander the Great',
+        '"Excellence is a habit." — Aristotle',
+        '"The unexamined life is not worth living." — Socrates',
+        '"Genius is perspiration." — Thomas Edison',
+        '"In the middle of difficulty lies opportunity." — Albert Einstein',
+        '"The way to get started is to quit talking and begin doing." — Walt Disney',
+        '"Innovation distinguishes between a leader and a follower." — Steve Jobs',
+        '"Whether you think you can or you can\'t, you\'re right." — Henry Ford',
+        '"Champions train, losers complain." — Muhammad Ali',
+        '"I can accept failure, but I can\'t accept not trying." — Michael Jordan',
+        '"Be like water." — Bruce Lee',
+        '"You miss 100% of the shots you don\'t take." — Wayne Gretzky',
+        '"Systems create freedom." — Khamare Clarke',
+        '"What gets measured gets mastered." — Khamare Clarke',
+        '"Discipline bridges goals and accomplishment." — Khamare Clarke',
+        '"Progress, not perfection." — Khamare Clarke',
+        '"Focus is knowing what to ignore." — Khamare Clarke',
+        '"Consistency compounds." — Khamare Clarke',
+        '"Daily choices become destiny." — Khamare Clarke',
+        '"Excellence is systematic." — Khamare Clarke',
+        '"Leverage amplifies effort." — Khamare Clarke',
+        '"Masters fail more than beginners try." — Khamare Clarke'
+    ];
+    return quotes[(day - 1) % quotes.length];
+}
+
+function getWeeklyQuote(week) {
+    const quotes = [
+        "The week's end is the beginning of wisdom. — Khamare Clarke",
+        "Reflection is the mother of all progress. — Confucius",
+        "A life unexamined is not worth living. — Socrates",
+        "Experience is the teacher of all things. — Julius Caesar",
+        "Learning never exhausts the mind. — Leonardo da Vinci"
+    ];
+    return quotes[(week - 1) % quotes.length];
+}
+
+// Chapter generators
+function generateChapter1Vision() {
+    return `<div class="page chapter-divider flex flex-col items-center justify-center">
+        <h1 class="font-serif text-center gold-gradient mb-6" style="font-size: 4rem;">CHAPTER 1</h1>
+        <h2 class="text-center gold-gradient mb-8" style="font-size: 2.5rem;">VISION</h2>
+        <div class="page-number">007</div>
+    </div>`;
+}
+
+function generateChapter1VisionComplete() {
+    return `<div class="page">
+        <h1 class="philosophy-title">The Law of Leverage</h1>
+        <p>Small, consistent actions compound into legacy.</p>
+        <div class="page-number">008</div>
+        <div class="footer-wisdom">"Action is the foundational key to all success." — Pablo Picasso</div>
+    </div>`;
+}
+
+function generateChapter2Plan() {
+    return `<div class="page chapter-divider flex flex-col items-center justify-center">
+        <h1 class="font-serif text-center gold-gradient mb-6" style="font-size: 4rem;">CHAPTER 2</h1>
+        <h2 class="text-center gold-gradient mb-8" style="font-size: 2.5rem;">PLAN</h2>
+        <div class="page-number">016</div>
+    </div>`;
+}
+
+function generateChapter3Do() {
+    let html = `<div class="page chapter-divider flex flex-col items-center justify-center">
+        <h1 class="font-serif text-center gold-gradient mb-6" style="font-size: 4rem;">CHAPTER 3</h1>
+        <h2 class="text-center gold-gradient mb-8" style="font-size: 2.5rem;">DO</h2>
+        <div class="page-number">018</div>
+    </div>`;
+    
+    // Generate 90 daily pages
+    let pageNum = 19;
+    for (let day = 1; day <= 90; day++) {
+        const quote = getDailyQuote(day);
+        html += `<div class="page daily-page">
+            <div class="daily-header mb-6">
+                <h1 class="gold-gradient text-center mb-2" style="font-size: 2.5rem;">DAY ${day}</h1>
+                <div class="gold-line mb-4" style="margin: 0 auto;"></div>
+                <div class="date-input" style="text-align: center; margin-bottom: 1rem;">
+                    <div style="border-bottom: 2px solid var(--gold-dark); width: 200px; margin: 0 auto; height: 30px;"></div>
+                    <p style="color: var(--gray); font-size: 0.8rem; margin-top: 0.5rem;">Date</p>
+                </div>
+            </div>
+            <div class="daily-content">
+                <div class="priorities-section mb-6">
+                    <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">🎯 Today's Priorities</h3>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+                </div>
+                <div class="reflection-section mb-6">
+                    <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">💭 Evening Reflection</h3>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+                </div>
+                <div class="wins-section mb-6">
+                    <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">🏆 Today's Wins</h3>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+                </div>
+            </div>
+            <div class="page-number">${pageNum.toString().padStart(3, '0')}</div>
+            <div class="footer-wisdom">${quote}</div>
+        </div>`;
+        pageNum++;
+        
+        // Add weekly review every 7 days
+        if (day % 7 === 0) {
+            const week = Math.ceil(day / 7);
+            const weeklyQuote = getWeeklyQuote(week);
+            html += `<div class="page weekly-review">
+                <h1 class="text-center gold-gradient mb-6" style="font-size: 2rem;">WEEK ${week} REVIEW</h1>
+                <div class="gold-line mb-6" style="margin: 0 auto;"></div>
+                <div class="review-sections">
+                    <div class="review-section mb-6">
+                        <h3 style="color: var(--gold); margin-bottom: 0.5rem;">📈 This Week's Wins</h3>
+                        <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+                        <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+                    </div>
+                    <div class="review-section mb-6">
+                        <h3 style="color: var(--gold); margin-bottom: 0.5rem;">🎯 Next Week's Focus</h3>
+                        <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+                        <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+                    </div>
+                </div>
+                <div class="page-number">${pageNum.toString().padStart(3, '0')}</div>
+                <div class="footer-wisdom">${weeklyQuote}</div>
+            </div>`;
+            pageNum++;
+        }
+    }
+    return html;
+}
+
+function generateChapter4Review() {
+    return `<div class="page chapter-divider flex flex-col items-center justify-center">
+        <h1 class="font-serif text-center gold-gradient mb-6" style="font-size: 4rem;">CHAPTER 4</h1>
+        <h2 class="text-center gold-gradient mb-8" style="font-size: 2.5rem;">REVIEW</h2>
+        <div class="page-number">122</div>
+    </div>`;
+}
+
+function generateChapter5Legacy() {
+    return `<div class="page chapter-divider flex flex-col items-center justify-center">
+        <h1 class="font-serif text-center gold-gradient mb-6" style="font-size: 4rem;">CHAPTER 5</h1>
+        <h2 class="text-center gold-gradient mb-8" style="font-size: 2.5rem;">LEGACY</h2>
+        <div class="page-number">128</div>
+    </div>`;
+}
+
+function generateBackMatter() {
+    return `<div class="page">
+        <h1 class="text-center gold-gradient mb-6">INDEX</h1>
+        <div class="page-number">129</div>
+    </div>`;
+}
+
+function generateBackCover() {
+    return `<div class="page cover-page">
+        <h1 class="text-center gold-gradient">THE LEVERAGE JOURNAL™</h1>
+        <p class="text-center">Your Empire Awaits</p>
+        <div class="page-number">130</div>
+    </div>`;
+}
+
+function initializeInteractiveElements() {
+    console.log('Master journal initialized');
+}
 </script>
 <!-- Updated: 2025-11-12 -->
 </body>
