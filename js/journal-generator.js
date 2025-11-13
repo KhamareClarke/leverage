@@ -150,7 +150,7 @@ function generateChapter1VisionComplete() {
             <h1 class="philosophy-title">The Law of Leverage</h1>
             
             <div class="philosophy-essay">
-                <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.75rem;">Small, consistent actions compound into legacy. This is the Law of Leverage—extraordinary results come from ordinary moments executed well.</p>
+                <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.75rem;">Small, consistent actions compound into legacy. This is the Law of Leverage: extraordinary results come from ordinary moments executed well.</p>
                 
                 <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.75rem;">Every empire was built one decision at a time. Every fortune was accumulated one dollar at a time. The magic is in consistency, not magnitude.</p>
                 
@@ -177,7 +177,7 @@ function generateChapter1VisionComplete() {
             <h1 class="philosophy-title">Freedom Through Focus</h1>
             
             <div class="philosophy-essay">
-                <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.75rem;">Freedom is not the absence of constraints—it is the intelligent application of constraints. Steve Jobs limited Apple to three priorities. This constraint created freedom to achieve perfection.</p>
+                <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.75rem;">Freedom is not the absence of constraints. It is the intelligent application of constraints. Steve Jobs limited Apple to three priorities. This constraint created freedom to achieve perfection.</p>
                 
                 <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.75rem;">In a world of infinite distractions, focus becomes your competitive advantage. While others scatter energy, you concentrate on the few that matter most.</p>
                 
@@ -1500,94 +1500,63 @@ function generateBackMatter() {
         
         <div class="index-content" style="columns: 2; column-gap: 1.5rem; margin-top: 1rem;">
             <div class="index-section">
-                <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 0.9rem;">A</h3>
+                <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 0.9rem;">Core Concepts</h3>
                 <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Accountability Partner, 016</div>
-                    <div>AI CoPilot, 022+</div>
-                    <div>Alchemical Formula, 209</div>
-                    <div>Analytics, 204</div>
+                    <div>• 7 Laws of Leverage</div>
+                    <div>• 90-Day System</div>
+                    <div>• Builder's Guild</div>
+                    <div>• Compound Focus</div>
+                    <div>• Daily Tracking</div>
+                    <div>• Digital Dashboard</div>
+                    <div>• Goal Framework</div>
+                    <div>• Legacy Planning</div>
                 </div>
                 
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">B</h3>
+                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">Journal Sections</h3>
                 <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Builder's Guild, 211</div>
-                    <div>Business Habits, 203</div>
+                    <div>• Vision (Chapter 1)</div>
+                    <div>• Plan (Chapter 2)</div>
+                    <div>• Daily Pages (Chapter 3)</div>
+                    <div>• Review (Chapter 4)</div>
+                    <div>• Legacy (Chapter 5)</div>
                 </div>
                 
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">C</h3>
+                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">Key Features</h3>
                 <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Certificate, 210</div>
-                    <div>Chapter System, 008+</div>
-                    <div>Compound Focus, 018</div>
-                    <div>Consistency, 009</div>
+                    <div>• Milestone Rewards</div>
+                    <div>• Progress Analytics</div>
+                    <div>• QR Code Integration</div>
+                    <div>• Reflection Prompts</div>
+                    <div>• Strategic Planning</div>
+                    <div>• Time Capsule</div>
+                    <div>• Vision Board</div>
+                    <div>• Weekly Reviews</div>
                 </div>
                 
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">D</h3>
+                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">M-P</h3>
                 <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Daily Pages, 022-201</div>
-                    <div>Digital Alchemist, 209</div>
-                    <div>Discipline, 203</div>
-                </div>
-                
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">E</h3>
-                <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Energy Tracking, 022+</div>
-                    <div>Excellence, 022</div>
-                </div>
-                
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">F</h3>
-                <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Focus Framework, 010</div>
-                    <div>Freedom Through Focus, 010</div>
-                </div>
-                
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">G-H</h3>
-                <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Goals, 015</div>
-                    <div>Habit Tracker, 203</div>
-                    <div>Health Habits, 203</div>
-                </div>
-                
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">L</h3>
-                <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Law of Leverage, 009</div>
-                    <div>Laws (12), 018-020</div>
-                    <div>Legacy, 208-211</div>
-                    <div>Leverage System, 005</div>
-                </div>
-                
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">M</h3>
-                <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Momentum Theory, 011</div>
-                    <div>Mood Tracking, 022+</div>
-                </div>
-                
-                <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">P-Q</h3>
-                <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Philosophy, 006-011</div>
-                    <div>Priorities (3), 022+</div>
-                    <div>Progress Analytics, 204</div>
-                    <div>QR Codes, 005+</div>
+                    <div>Momentum Theory</div>
+                    <div>Mood Tracking</div>
                 </div>
                 
                 <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">R-S</h3>
                 <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Reflection, 022+</div>
-                    <div>Review Pages, 202-204</div>
-                    <div>Strategic Constraint, 018</div>
-                    <div>System Supremacy, 018</div>
+                    <div>Reflection</div>
+                    <div>Review Pages</div>
+                    <div>Strategic Constraint</div>
+                    <div>System Supremacy</div>
                 </div>
                 
                 <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">T-V</h3>
                 <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Transformation, 202-211</div>
-                    <div>Vision, 008-016</div>
+                    <div>Transformation</div>
+                    <div>Vision</div>
                 </div>
                 
                 <h3 style="color: var(--gold); margin: 1rem 0 0.5rem 0; font-size: 0.9rem;">W</h3>
                 <div class="index-items" style="color: var(--gray-light); line-height: 1.4; font-size: 0.75rem;">
-                    <div>Weekly Reviews, Every 7th</div>
-                    <div>Wealth Habits, 203</div>
+                    <div>Weekly Reviews</div>
+                    <div>Wealth Habits</div>
                 </div>
             </div>
         </div>
