@@ -440,69 +440,177 @@ function generateChapter2Plan() {
 }
 
 function generateChapter3Do() {
-    let html = `<div class="page chapter-divider flex flex-col items-center justify-center">
-        <h1 class="font-serif text-center gold-gradient mb-6" style="font-size: 4rem;">CHAPTER 3</h1>
-        <h2 class="text-center gold-gradient mb-8" style="font-size: 2.5rem;">DO</h2>
+    let html = `
+    <!-- CHAPTER 3 DIVIDER -->
+    <div class="page chapter-divider flex flex-col items-center justify-center">
+        <div class="chapter-icon mb-8">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="var(--gold)" stroke-width="2" fill="var(--gold)" opacity="0.1"/>
+            </svg>
+        </div>
+        
+        <h1 class="font-serif text-center gold-gradient mb-6" style="font-size: 4rem; line-height: 1;">
+            CHAPTER 3
+        </h1>
+        
+        <h2 class="text-center gold-gradient mb-8" style="font-size: 2.5rem; font-weight: 300;">
+            DO
+        </h2>
+        
+        <div class="gold-line mb-8" style="width: 250px;"></div>
+        
+        <p class="text-center text-xl mb-6" style="color: var(--gray-light); line-height: 1.6; max-width: 500px;">
+            Excellence is not an act, but a habit.<br>
+            Execute with intention.<br>
+            <span class="gold-gradient font-semibold">Transform through action.</span>
+        </p>
+        
         <div class="page-number">018</div>
     </div>`;
     
-    // Generate 90 daily pages
+    // Generate 90 daily pages with proper styling
     let pageNum = 19;
     for (let day = 1; day <= 90; day++) {
         const quote = getDailyQuote(day);
-        html += `<div class="page daily-page">
-            <div class="daily-header mb-6">
-                <h1 class="gold-gradient text-center mb-2" style="font-size: 2.5rem;">DAY ${day}</h1>
-                <div class="gold-line mb-4" style="margin: 0 auto;"></div>
-                <div class="date-input" style="text-align: center; margin-bottom: 1rem;">
-                    <div style="border-bottom: 2px solid var(--gold-dark); width: 200px; margin: 0 auto; height: 30px;"></div>
-                    <p style="color: var(--gray); font-size: 0.8rem; margin-top: 0.5rem;">Date</p>
+        html += `
+    <!-- DAY ${day} -->
+    <div class="page daily-page">
+        <div class="daily-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0rem; margin-top: 0rem;">
+            <div class="day-number" style="background: var(--gold); color: var(--black); padding: 0.15rem 0.3rem; border-radius: 6px; font-weight: bold; font-size: 0.6rem;">
+                DAY ${day}
+            </div>
+            <div class="date-section" style="display: flex; align-items: center; gap: 1rem;">
+                <div class="date-field" style="color: var(--gray); border-bottom: 1px solid var(--gray-dark); padding: 0.2rem; min-width: 90px; font-size: 0.75rem;">
+                    DATE: _______________
+                </div>
+                <div class="day-tracker" style="display: flex; gap: 0.12rem; color: var(--gray); font-size: 0.75rem;">
+                    <span style="padding: 0.06rem 0.16rem; border: 1px solid var(--gray-dark); border-radius: 2px; font-size: 0.75rem;">M</span>
+                    <span style="padding: 0.06rem 0.16rem; border: 1px solid var(--gray-dark); border-radius: 2px; font-size: 0.75rem;">T</span>
+                    <span style="padding: 0.06rem 0.16rem; border: 1px solid var(--gray-dark); border-radius: 2px; font-size: 0.75rem;">W</span>
+                    <span style="padding: 0.06rem 0.16rem; border: 1px solid var(--gray-dark); border-radius: 2px; font-size: 0.75rem;">T</span>
+                    <span style="padding: 0.06rem 0.16rem; border: 1px solid var(--gray-dark); border-radius: 2px; font-size: 0.75rem;">F</span>
+                    <span style="padding: 0.06rem 0.16rem; border: 1px solid var(--gray-dark); border-radius: 2px; font-size: 0.75rem;">S</span>
+                    <span style="padding: 0.06rem 0.16rem; border: 1px solid var(--gray-dark); border-radius: 2px; font-size: 0.75rem;">S</span>
                 </div>
             </div>
-            <div class="daily-content">
-                <div class="priorities-section mb-6">
-                    <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">🎯 Today's Priorities</h3>
-                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
-                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
-                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+        </div>
+        
+        <div class="gratitude-section" style="background: var(--black-soft); padding: 0.3rem; border-radius: 2px; margin-bottom: 0.15rem;">
+            <h4 style="color: var(--gold); margin-bottom: 0.25rem; font-size: 0.85rem;">🙏 TODAY I AM GRATEFUL FOR</h4>
+            <div class="writing-lines">
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 24px;"></div>
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 24px;"></div>
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 24px;"></div>
+            </div>
+        </div>
+        
+        <div class="todays-goal-section" style="background: var(--black-card); padding: 0.3rem; border-radius: 2px; margin-bottom: 0.15rem; border-left: 1px solid var(--gold);">
+            <h4 style="color: var(--gold); margin-bottom: 0.25rem; font-size: 0.85rem;">🎯 TODAY'S 3 PRIORITIES</h4>
+            
+            <div class="jobs-priorities" style="display: grid; gap: 0.1rem;">
+                <div class="priority-box" style="background: var(--black-soft); padding: 0.2rem; border-radius: 1px; border-left: 1px solid var(--gold);">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.1rem;">
+                        <span style="color: var(--gold); font-weight: bold; margin-right: 0.25rem; font-size: 0.8rem;">1.</span>
+                        <span style="color: var(--gold-light); font-size: 0.8rem;">MOST IMPORTANT</span>
+                    </div>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.35rem 0; height: 22px;"></div>
                 </div>
-                <div class="reflection-section mb-6">
-                    <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">💭 Evening Reflection</h3>
-                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
-                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+                
+                <div class="priority-box" style="background: var(--black-soft); padding: 0.2rem; border-radius: 1px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.1rem;">
+                        <span style="color: var(--gold); font-weight: bold; margin-right: 0.25rem; font-size: 0.8rem;">2.</span>
+                        <span style="color: var(--gold-light); font-size: 0.8rem;">HIGH IMPACT</span>
+                    </div>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.35rem 0; height: 22px;"></div>
                 </div>
-                <div class="wins-section mb-6">
-                    <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1rem;">🏆 Today's Wins</h3>
-                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.5rem 0; height: 25px;"></div>
+                
+                <div class="priority-box" style="background: var(--black-soft); padding: 0.2rem; border-radius: 1px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.1rem;">
+                        <span style="color: var(--gold); font-weight: bold; margin-right: 0.25rem; font-size: 0.8rem;">3.</span>
+                        <span style="color: var(--gold-light); font-size: 0.8rem;">STRATEGIC MOVE</span>
+                    </div>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.35rem 0; height: 22px;"></div>
                 </div>
             </div>
-            <div class="page-number">${pageNum.toString().padStart(3, '0')}</div>
-            <div class="footer-wisdom">${quote}</div>
-        </div>`;
+        </div>
+        
+        <div class="evening-reflection" style="background: var(--black-card); padding: 0.3rem; border-radius: 2px; margin-bottom: 0.15rem;">
+            <h4 style="color: var(--gold); margin-bottom: 0.25rem; font-size: 0.85rem;">🌙 EVENING REFLECTION</h4>
+            <div class="reflection-questions" style="display: grid; gap: 0.1rem;">
+                <div style="margin-bottom: 0.1rem;">
+                    <p style="color: var(--gray-light); font-size: 0.75rem; margin-bottom: 0.1rem;">What went well today?</p>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.2rem 0; height: 18px;"></div>
+                </div>
+                <div style="margin-bottom: 0.1rem;">
+                    <p style="color: var(--gray-light); font-size: 0.75rem; margin-bottom: 0.1rem;">What could be improved?</p>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.2rem 0; height: 18px;"></div>
+                </div>
+                <div style="margin-bottom: 0.1rem;">
+                    <p style="color: var(--gray-light); font-size: 0.75rem; margin-bottom: 0.1rem;">Tomorrow's focus:</p>
+                    <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.2rem 0; height: 18px;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="daily-metrics" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.2rem; margin-bottom: 0.3rem;">
+            <div class="metric" style="text-align: center; padding: 0.2rem; background: var(--black-soft); border-radius: 2px;">
+                <h5 style="color: var(--gold); margin-bottom: 0.1rem; font-size: 0.7rem;">ENERGY</h5>
+                <div style="color: var(--gray); font-size: 0.7rem;">1 2 3 4 5</div>
+            </div>
+            <div class="metric" style="text-align: center; padding: 0.2rem; background: var(--black-soft); border-radius: 2px;">
+                <h5 style="color: var(--gold); margin-bottom: 0.1rem; font-size: 0.7rem;">MOOD</h5>
+                <div style="color: var(--gray); font-size: 0.7rem;">😞 😐 🙂 😊 🤩</div>
+            </div>
+            <div class="metric" style="text-align: center; padding: 0.2rem; background: var(--black-soft); border-radius: 2px;">
+                <h5 style="color: var(--gold); margin-bottom: 0.1rem; font-size: 0.7rem;">FOCUS</h5>
+                <div style="color: var(--gray); font-size: 0.7rem;">1 2 3 4 5</div>
+            </div>
+            <div class="metric" style="text-align: center; padding: 0.2rem; background: var(--black-soft); border-radius: 2px;">
+                <h5 style="color: var(--gold); margin-bottom: 0.1rem; font-size: 0.7rem;">PROGRESS</h5>
+                <div style="color: var(--gray); font-size: 0.7rem;">1 2 3 4 5</div>
+            </div>
+        </div>
+        
+        <div class="page-number">${pageNum.toString().padStart(3, '0')}</div>
+        <div class="footer-wisdom">${quote}</div>
+    </div>`;
         pageNum++;
         
         // Add weekly review every 7 days
         if (day % 7 === 0) {
             const week = Math.ceil(day / 7);
             const weeklyQuote = getWeeklyQuote(week);
-            html += `<div class="page weekly-review">
-                <h1 class="text-center gold-gradient mb-6" style="font-size: 2rem;">WEEK ${week} REVIEW</h1>
-                <div class="gold-line mb-6" style="margin: 0 auto;"></div>
-                <div class="review-sections">
-                    <div class="review-section mb-6">
-                        <h3 style="color: var(--gold); margin-bottom: 0.5rem;">📈 This Week's Wins</h3>
-                        <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
-                        <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
-                    </div>
-                    <div class="review-section mb-6">
-                        <h3 style="color: var(--gold); margin-bottom: 0.5rem;">🎯 Next Week's Focus</h3>
-                        <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
-                        <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
-                    </div>
-                </div>
-                <div class="page-number">${pageNum.toString().padStart(3, '0')}</div>
-                <div class="footer-wisdom">${weeklyQuote}</div>
-            </div>`;
+            html += `
+    <!-- WEEK ${week} REVIEW -->
+    <div class="page weekly-review">
+        <div class="section-icon mb-6" style="margin-top: -2rem;">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                <path d="M9 11H15M9 15H15M17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H12.5858C12.851 3 13.1054 3.10536 13.2929 3.29289L19.7071 9.70711C19.8946 9.89464 20 10.149 20 10.4142V19C20 20.1046 19.1046 21 18 21H17ZM17 21V11H13V7H7V19H17Z" stroke="var(--gold)" stroke-width="2"/>
+            </svg>
+        </div>
+        
+        <h1 class="text-center gold-gradient mb-6" style="font-size: 2rem;">WEEK ${week} REVIEW</h1>
+        <div class="gold-line mb-6" style="margin: 0 auto;"></div>
+        
+        <div class="review-sections">
+            <div class="review-section mb-6">
+                <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 0.9rem;">📈 This Week's Wins</h3>
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+            </div>
+            
+            <div class="review-section mb-6">
+                <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 0.9rem;">🎯 Next Week's Focus</h3>
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+                <div style="border-bottom: 1px solid var(--gray-dark); margin: 0.4rem 0; height: 22px;"></div>
+            </div>
+        </div>
+        
+        <div class="page-number">${pageNum.toString().padStart(3, '0')}</div>
+        <div class="footer-wisdom">${weeklyQuote}</div>
+    </div>`;
             pageNum++;
         }
     }
