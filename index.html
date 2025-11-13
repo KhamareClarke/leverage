@@ -310,61 +310,105 @@ function generateMasterJournal() {
     try {
         console.log('Starting journal generation...');
         
-        // Create a temporary container to hold all pages
-        const tempContainer = document.createElement('div');
-        
-        // Generate all sections in order with error checking
-        console.log('Generating Chapter 1 Vision...');
-        const chapter1 = generateChapter1Vision();
-        console.log('Generating Chapter 1 Vision Complete...');
-        const chapter1Complete = generateChapter1VisionComplete();
-        console.log('Generating Chapter 2 Plan...');
-        const chapter2 = generateChapter2Plan();
-        console.log('Generating Chapter 3 Do...');
-        const chapter3 = generateChapter3Do();
-        console.log('Generating Chapter 4 Review...');
-        const chapter4 = generateChapter4Review();
-        console.log('Generating Chapter 5 Legacy...');
-        const chapter5 = generateChapter5Legacy();
-        console.log('Generating Back Matter...');
-        const backMatter = generateBackMatter();
-        console.log('Generating Back Cover...');
-        const backCover = generateBackCover();
-        
-        tempContainer.innerHTML = 
-            chapter1 +
-            chapter1Complete +
-            chapter2 +
-            chapter3 +
-            chapter4 +
-            chapter5 +
-            backMatter +
-            backCover;
-        
-        // Get the main container
+        // Get the main container first
         const mainContainer = document.getElementById('journal-content');
         if (!mainContainer) {
             console.error('Could not find journal-content element');
             return;
         }
         
-        // Clear existing content and append new content
+        // Clear existing content
         mainContainer.innerHTML = '';
-        while (tempContainer.firstChild) {
-            mainContainer.appendChild(tempContainer.firstChild);
+        
+        // Generate all sections in order and append directly
+        console.log('Generating Chapter 1 Vision...');
+        try {
+            const chapter1HTML = generateChapter1Vision();
+            console.log('Chapter 1 HTML length:', chapter1HTML.length);
+            mainContainer.innerHTML += chapter1HTML;
+        } catch (e) {
+            console.error('Error generating Chapter 1:', e);
+        }
+        
+        console.log('Generating Chapter 1 Vision Complete...');
+        try {
+            const chapter1CompleteHTML = generateChapter1VisionComplete();
+            console.log('Chapter 1 Complete HTML length:', chapter1CompleteHTML.length);
+            mainContainer.innerHTML += chapter1CompleteHTML;
+        } catch (e) {
+            console.error('Error generating Chapter 1 Complete:', e);
+        }
+        
+        console.log('Generating Chapter 2 Plan...');
+        try {
+            const chapter2HTML = generateChapter2Plan();
+            console.log('Chapter 2 HTML length:', chapter2HTML.length);
+            mainContainer.innerHTML += chapter2HTML;
+        } catch (e) {
+            console.error('Error generating Chapter 2:', e);
+        }
+        
+        console.log('Generating Chapter 3 Do...');
+        try {
+            const chapter3HTML = generateChapter3Do();
+            console.log('Chapter 3 HTML length:', chapter3HTML.length);
+            mainContainer.innerHTML += chapter3HTML;
+        } catch (e) {
+            console.error('Error generating Chapter 3:', e);
+        }
+        
+        console.log('Generating Chapter 4 Review...');
+        try {
+            const chapter4HTML = generateChapter4Review();
+            console.log('Chapter 4 HTML length:', chapter4HTML.length);
+            mainContainer.innerHTML += chapter4HTML;
+        } catch (e) {
+            console.error('Error generating Chapter 4:', e);
+        }
+        
+        console.log('Generating Chapter 5 Legacy...');
+        try {
+            const chapter5HTML = generateChapter5Legacy();
+            console.log('Chapter 5 HTML length:', chapter5HTML.length);
+            mainContainer.innerHTML += chapter5HTML;
+        } catch (e) {
+            console.error('Error generating Chapter 5:', e);
+        }
+        
+        console.log('Generating Back Matter...');
+        try {
+            const backMatterHTML = generateBackMatter();
+            console.log('Back Matter HTML length:', backMatterHTML.length);
+            mainContainer.innerHTML += backMatterHTML;
+        } catch (e) {
+            console.error('Error generating Back Matter:', e);
+        }
+        
+        console.log('Generating Back Cover...');
+        try {
+            const backCoverHTML = generateBackCover();
+            console.log('Back Cover HTML length:', backCoverHTML.length);
+            mainContainer.innerHTML += backCoverHTML;
+        } catch (e) {
+            console.error('Error generating Back Cover:', e);
         }
         
         // Initialize interactive elements
         initializeInteractiveElements();
         
-        console.log('Journal content generated successfully - Total pages should be 129');
+        console.log('Journal content generated successfully');
         
         // Count pages for verification
         const pages = mainContainer.querySelectorAll('.page');
         console.log(`Total pages generated: ${pages.length}`);
         
+        // Log first few page numbers for debugging
+        const pageNumbers = Array.from(mainContainer.querySelectorAll('.page-number')).slice(0, 10).map(el => el.textContent);
+        console.log('First 10 page numbers:', pageNumbers);
+        
     } catch (error) {
         console.error('Error generating journal:', error);
+        console.error('Stack trace:', error.stack);
     }
 }
 
