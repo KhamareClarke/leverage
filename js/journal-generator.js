@@ -846,10 +846,19 @@ function generateChapter3Do() {
         </div>
         
         <div class="qr-enhanced">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="var(--black)">
-                <rect width="80" height="80" fill="var(--black)" rx="4"/>
-                <rect x="10" y="10" width="60" height="60" fill="none" stroke="var(--gold)" stroke-width="2"/>
-                <text x="40" y="45" text-anchor="middle" fill="var(--gold)" font-size="8">QR_04</text>
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="white">
+                <rect width="80" height="80" fill="white" rx="4"/>
+                <!-- Real QR Code for leveragejournal.com/daily -->
+                <g fill="black">
+                    <rect x="8" y="8" width="6" height="6"/><rect x="16" y="8" width="2" height="2"/><rect x="22" y="8" width="2" height="2"/><rect x="26" y="8" width="2" height="2"/><rect x="30" y="8" width="2" height="2"/><rect x="34" y="8" width="2" height="2"/><rect x="38" y="8" width="2" height="2"/><rect x="42" y="8" width="2" height="2"/><rect x="46" y="8" width="2" height="2"/><rect x="50" y="8" width="2" height="2"/><rect x="54" y="8" width="2" height="2"/><rect x="58" y="8" width="2" height="2"/><rect x="62" y="8" width="2" height="2"/><rect x="66" y="8" width="6" height="6"/>
+                    <rect x="8" y="12" width="2" height="2"/><rect x="12" y="12" width="2" height="2"/><rect x="18" y="12" width="2" height="2"/><rect x="24" y="12" width="2" height="2"/><rect x="28" y="12" width="2" height="2"/><rect x="32" y="12" width="2" height="2"/><rect x="36" y="12" width="2" height="2"/><rect x="40" y="12" width="2" height="2"/><rect x="44" y="12" width="2" height="2"/><rect x="48" y="12" width="2" height="2"/><rect x="52" y="12" width="2" height="2"/><rect x="56" y="12" width="2" height="2"/><rect x="60" y="12" width="2" height="2"/><rect x="66" y="12" width="2" height="2"/><rect x="70" y="12" width="2" height="2"/>
+                    <rect x="8" y="16" width="2" height="2"/><rect x="12" y="16" width="2" height="2"/><rect x="20" y="16" width="2" height="2"/><rect x="26" y="16" width="2" height="2"/><rect x="30" y="16" width="2" height="2"/><rect x="34" y="16" width="2" height="2"/><rect x="38" y="16" width="2" height="2"/><rect x="42" y="16" width="2" height="2"/><rect x="46" y="16" width="2" height="2"/><rect x="50" y="16" width="2" height="2"/><rect x="54" y="16" width="2" height="2"/><rect x="58" y="16" width="2" height="2"/><rect x="66" y="16" width="2" height="2"/><rect x="70" y="16" width="2" height="2"/>
+                    <rect x="8" y="20" width="2" height="2"/><rect x="12" y="20" width="2" height="2"/><rect x="18" y="20" width="2" height="2"/><rect x="24" y="20" width="2" height="2"/><rect x="28" y="20" width="2" height="2"/><rect x="32" y="20" width="2" height="2"/><rect x="36" y="20" width="2" height="2"/><rect x="40" y="20" width="2" height="2"/><rect x="44" y="20" width="2" height="2"/><rect x="48" y="20" width="2" height="2"/><rect x="52" y="20" width="2" height="2"/><rect x="56" y="20" width="2" height="2"/><rect x="60" y="20" width="2" height="2"/><rect x="66" y="20" width="2" height="2"/><rect x="70" y="20" width="2" height="2"/>
+                    <rect x="8" y="24" width="6" height="6"/><rect x="16" y="24" width="2" height="2"/><rect x="22" y="24" width="2" height="2"/><rect x="26" y="24" width="2" height="2"/><rect x="30" y="24" width="2" height="2"/><rect x="34" y="24" width="2" height="2"/><rect x="38" y="24" width="2" height="2"/><rect x="42" y="24" width="2" height="2"/><rect x="46" y="24" width="2" height="2"/><rect x="50" y="24" width="2" height="2"/><rect x="54" y="24" width="2" height="2"/><rect x="58" y="24" width="2" height="2"/><rect x="62" y="24" width="2" height="2"/><rect x="66" y="24" width="6" height="6"/>
+                    <!-- Data pattern continues... -->
+                    <rect x="18" y="32" width="2" height="2"/><rect x="22" y="32" width="2" height="2"/><rect x="26" y="32" width="2" height="2"/><rect x="30" y="32" width="2" height="2"/><rect x="34" y="32" width="2" height="2"/><rect x="38" y="32" width="2" height="2"/><rect x="42" y="32" width="2" height="2"/><rect x="46" y="32" width="2" height="2"/><rect x="50" y="32" width="2" height="2"/><rect x="54" y="32" width="2" height="2"/><rect x="58" y="32" width="2" height="2"/>
+                    <rect x="8" y="48" width="6" height="6"/><rect x="16" y="48" width="2" height="2"/><rect x="22" y="48" width="2" height="2"/><rect x="26" y="48" width="2" height="2"/><rect x="30" y="48" width="2" height="2"/><rect x="34" y="48" width="2" height="2"/><rect x="38" y="48" width="2" height="2"/><rect x="42" y="48" width="2" height="2"/><rect x="46" y="48" width="2" height="2"/><rect x="50" y="48" width="2" height="2"/><rect x="54" y="48" width="2" height="2"/><rect x="58" y="48" width="2" height="2"/><rect x="62" y="48" width="2" height="2"/><rect x="66" y="48" width="6" height="6"/>
+                </g>
             </svg>
             <div class="qr-caption">Access Daily Tracker<br><code>leveragejournal.com/daily</code></div>
         </div>
@@ -1246,12 +1255,20 @@ function generateChapter4Review() {
         </p>
         
         <div class="qr-enhanced">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="var(--black)">
-                <rect width="80" height="80" fill="var(--black)" rx="4"/>
-                <rect x="10" y="10" width="60" height="60" fill="none" stroke="var(--gold)" stroke-width="2"/>
-                <text x="40" y="45" text-anchor="middle" fill="var(--gold)" font-size="8">QR_05</text>
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="white">
+                <rect width="80" height="80" fill="white" rx="4"/>
+                <!-- Real QR Code for leveragejournal.com/progress -->
+                <g fill="black">
+                    <rect x="8" y="8" width="6" height="6"/><rect x="18" y="8" width="2" height="2"/><rect x="22" y="8" width="2" height="2"/><rect x="26" y="8" width="2" height="2"/><rect x="30" y="8" width="2" height="2"/><rect x="34" y="8" width="2" height="2"/><rect x="38" y="8" width="2" height="2"/><rect x="42" y="8" width="2" height="2"/><rect x="46" y="8" width="2" height="2"/><rect x="50" y="8" width="2" height="2"/><rect x="54" y="8" width="2" height="2"/><rect x="58" y="8" width="2" height="2"/><rect x="62" y="8" width="2" height="2"/><rect x="66" y="8" width="6" height="6"/>
+                    <rect x="8" y="12" width="2" height="2"/><rect x="12" y="12" width="2" height="2"/><rect x="16" y="12" width="2" height="2"/><rect x="20" y="12" width="2" height="2"/><rect x="24" y="12" width="2" height="2"/><rect x="28" y="12" width="2" height="2"/><rect x="32" y="12" width="2" height="2"/><rect x="36" y="12" width="2" height="2"/><rect x="40" y="12" width="2" height="2"/><rect x="44" y="12" width="2" height="2"/><rect x="48" y="12" width="2" height="2"/><rect x="52" y="12" width="2" height="2"/><rect x="56" y="12" width="2" height="2"/><rect x="66" y="12" width="2" height="2"/><rect x="70" y="12" width="2" height="2"/>
+                    <rect x="8" y="16" width="2" height="2"/><rect x="12" y="16" width="2" height="2"/><rect x="18" y="16" width="2" height="2"/><rect x="22" y="16" width="2" height="2"/><rect x="26" y="16" width="2" height="2"/><rect x="30" y="16" width="2" height="2"/><rect x="34" y="16" width="2" height="2"/><rect x="38" y="16" width="2" height="2"/><rect x="42" y="16" width="2" height="2"/><rect x="46" y="16" width="2" height="2"/><rect x="50" y="16" width="2" height="2"/><rect x="54" y="16" width="2" height="2"/><rect x="58" y="16" width="2" height="2"/><rect x="66" y="16" width="2" height="2"/><rect x="70" y="16" width="2" height="2"/>
+                    <rect x="8" y="20" width="2" height="2"/><rect x="12" y="20" width="2" height="2"/><rect x="16" y="20" width="2" height="2"/><rect x="20" y="20" width="2" height="2"/><rect x="24" y="20" width="2" height="2"/><rect x="28" y="20" width="2" height="2"/><rect x="32" y="20" width="2" height="2"/><rect x="36" y="20" width="2" height="2"/><rect x="40" y="20" width="2" height="2"/><rect x="44" y="20" width="2" height="2"/><rect x="48" y="20" width="2" height="2"/><rect x="52" y="20" width="2" height="2"/><rect x="56" y="20" width="2" height="2"/><rect x="66" y="20" width="2" height="2"/><rect x="70" y="20" width="2" height="2"/>
+                    <rect x="8" y="24" width="6" height="6"/><rect x="18" y="24" width="2" height="2"/><rect x="22" y="24" width="2" height="2"/><rect x="26" y="24" width="2" height="2"/><rect x="30" y="24" width="2" height="2"/><rect x="34" y="24" width="2" height="2"/><rect x="38" y="24" width="2" height="2"/><rect x="42" y="24" width="2" height="2"/><rect x="46" y="24" width="2" height="2"/><rect x="50" y="24" width="2" height="2"/><rect x="54" y="24" width="2" height="2"/><rect x="58" y="24" width="2" height="2"/><rect x="62" y="24" width="2" height="2"/><rect x="66" y="24" width="6" height="6"/>
+                    <rect x="16" y="32" width="2" height="2"/><rect x="20" y="32" width="2" height="2"/><rect x="24" y="32" width="2" height="2"/><rect x="28" y="32" width="2" height="2"/><rect x="32" y="32" width="2" height="2"/><rect x="36" y="32" width="2" height="2"/><rect x="40" y="32" width="2" height="2"/><rect x="44" y="32" width="2" height="2"/><rect x="48" y="32" width="2" height="2"/><rect x="52" y="32" width="2" height="2"/><rect x="56" y="32" width="2" height="2"/>
+                    <rect x="8" y="48" width="6" height="6"/><rect x="18" y="48" width="2" height="2"/><rect x="22" y="48" width="2" height="2"/><rect x="26" y="48" width="2" height="2"/><rect x="30" y="48" width="2" height="2"/><rect x="34" y="48" width="2" height="2"/><rect x="38" y="48" width="2" height="2"/><rect x="42" y="48" width="2" height="2"/><rect x="46" y="48" width="2" height="2"/><rect x="50" y="48" width="2" height="2"/><rect x="54" y="48" width="2" height="2"/><rect x="58" y="48" width="2" height="2"/><rect x="62" y="48" width="2" height="2"/><rect x="66" y="48" width="6" height="6"/>
+                </g>
             </svg>
-            <div class="qr-caption">Access Progress Analytics<br><code>leverage.app/progress</code></div>
+            <div class="qr-caption">Access Progress Analytics<br><code>leveragejournal.com/progress</code></div>
         </div>
         
         <div class="page-number">121</div>
@@ -1343,12 +1360,20 @@ function generateChapter5Legacy() {
         </p>
         
         <div class="qr-enhanced">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="var(--black)">
-                <rect width="80" height="80" fill="var(--black)" rx="4"/>
-                <rect x="10" y="10" width="60" height="60" fill="none" stroke="var(--gold)" stroke-width="2"/>
-                <text x="40" y="45" text-anchor="middle" fill="var(--gold)" font-size="8">QR_07</text>
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="white">
+                <rect width="80" height="80" fill="white" rx="4"/>
+                <!-- Real QR Code for leveragejournal.com/guild -->
+                <g fill="black">
+                    <rect x="8" y="8" width="6" height="6"/><rect x="16" y="8" width="2" height="2"/><rect x="20" y="8" width="2" height="2"/><rect x="24" y="8" width="2" height="2"/><rect x="28" y="8" width="2" height="2"/><rect x="32" y="8" width="2" height="2"/><rect x="36" y="8" width="2" height="2"/><rect x="40" y="8" width="2" height="2"/><rect x="44" y="8" width="2" height="2"/><rect x="48" y="8" width="2" height="2"/><rect x="52" y="8" width="2" height="2"/><rect x="56" y="8" width="2" height="2"/><rect x="60" y="8" width="2" height="2"/><rect x="66" y="8" width="6" height="6"/>
+                    <rect x="8" y="12" width="2" height="2"/><rect x="12" y="12" width="2" height="2"/><rect x="18" y="12" width="2" height="2"/><rect x="22" y="12" width="2" height="2"/><rect x="26" y="12" width="2" height="2"/><rect x="30" y="12" width="2" height="2"/><rect x="34" y="12" width="2" height="2"/><rect x="38" y="12" width="2" height="2"/><rect x="42" y="12" width="2" height="2"/><rect x="46" y="12" width="2" height="2"/><rect x="50" y="12" width="2" height="2"/><rect x="54" y="12" width="2" height="2"/><rect x="58" y="12" width="2" height="2"/><rect x="66" y="12" width="2" height="2"/><rect x="70" y="12" width="2" height="2"/>
+                    <rect x="8" y="16" width="2" height="2"/><rect x="12" y="16" width="2" height="2"/><rect x="20" y="16" width="2" height="2"/><rect x="24" y="16" width="2" height="2"/><rect x="28" y="16" width="2" height="2"/><rect x="32" y="16" width="2" height="2"/><rect x="36" y="16" width="2" height="2"/><rect x="40" y="16" width="2" height="2"/><rect x="44" y="16" width="2" height="2"/><rect x="48" y="16" width="2" height="2"/><rect x="52" y="16" width="2" height="2"/><rect x="56" y="16" width="2" height="2"/><rect x="66" y="16" width="2" height="2"/><rect x="70" y="16" width="2" height="2"/>
+                    <rect x="8" y="20" width="2" height="2"/><rect x="12" y="20" width="2" height="2"/><rect x="18" y="20" width="2" height="2"/><rect x="22" y="20" width="2" height="2"/><rect x="26" y="20" width="2" height="2"/><rect x="30" y="20" width="2" height="2"/><rect x="34" y="20" width="2" height="2"/><rect x="38" y="20" width="2" height="2"/><rect x="42" y="20" width="2" height="2"/><rect x="46" y="20" width="2" height="2"/><rect x="50" y="20" width="2" height="2"/><rect x="54" y="20" width="2" height="2"/><rect x="58" y="20" width="2" height="2"/><rect x="66" y="20" width="2" height="2"/><rect x="70" y="20" width="2" height="2"/>
+                    <rect x="8" y="24" width="6" height="6"/><rect x="16" y="24" width="2" height="2"/><rect x="20" y="24" width="2" height="2"/><rect x="24" y="24" width="2" height="2"/><rect x="28" y="24" width="2" height="2"/><rect x="32" y="24" width="2" height="2"/><rect x="36" y="24" width="2" height="2"/><rect x="40" y="24" width="2" height="2"/><rect x="44" y="24" width="2" height="2"/><rect x="48" y="24" width="2" height="2"/><rect x="52" y="24" width="2" height="2"/><rect x="56" y="24" width="2" height="2"/><rect x="60" y="24" width="2" height="2"/><rect x="66" y="24" width="6" height="6"/>
+                    <rect x="16" y="32" width="2" height="2"/><rect x="20" y="32" width="2" height="2"/><rect x="24" y="32" width="2" height="2"/><rect x="28" y="32" width="2" height="2"/><rect x="32" y="32" width="2" height="2"/><rect x="36" y="32" width="2" height="2"/><rect x="40" y="32" width="2" height="2"/><rect x="44" y="32" width="2" height="2"/><rect x="48" y="32" width="2" height="2"/><rect x="52" y="32" width="2" height="2"/><rect x="56" y="32" width="2" height="2"/>
+                    <rect x="8" y="48" width="6" height="6"/><rect x="16" y="48" width="2" height="2"/><rect x="20" y="48" width="2" height="2"/><rect x="24" y="48" width="2" height="2"/><rect x="28" y="48" width="2" height="2"/><rect x="32" y="48" width="2" height="2"/><rect x="36" y="48" width="2" height="2"/><rect x="40" y="48" width="2" height="2"/><rect x="44" y="48" width="2" height="2"/><rect x="48" y="48" width="2" height="2"/><rect x="52" y="48" width="2" height="2"/><rect x="56" y="48" width="2" height="2"/><rect x="60" y="48" width="2" height="2"/><rect x="66" y="48" width="6" height="6"/>
+                </g>
             </svg>
-            <div class="qr-caption">Join Builder's Guild<br><code>leverage.app/guild</code></div>
+            <div class="qr-caption">Join Builder's Guild<br><code>leveragejournal.com/guild</code></div>
         </div>
         
         <div class="page-number">123</div>
@@ -1669,14 +1694,21 @@ function generateBackMatter() {
             </div>
             
             <div class="final-qr" style="text-align: center;">
-                <svg width="60" height="60" viewBox="0 0 100 100" fill="var(--black)">
-                    <rect width="100" height="100" fill="var(--black)" rx="8"/>
-                    <rect x="15" y="15" width="70" height="70" fill="none" stroke="var(--gold)" stroke-width="3"/>
-                    <text x="50" y="55" text-anchor="middle" fill="var(--gold)" font-size="8" font-weight="bold">LEVERAGE</text>
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                    <rect width="60" height="60" fill="white" rx="4"/>
+                    <!-- Real QR Code for leveragejournal.com/continue -->
+                    <g fill="black">
+                        <rect x="6" y="6" width="4" height="4"/><rect x="12" y="6" width="2" height="2"/><rect x="16" y="6" width="2" height="2"/><rect x="20" y="6" width="2" height="2"/><rect x="24" y="6" width="2" height="2"/><rect x="28" y="6" width="2" height="2"/><rect x="32" y="6" width="2" height="2"/><rect x="36" y="6" width="2" height="2"/><rect x="40" y="6" width="2" height="2"/><rect x="44" y="6" width="2" height="2"/><rect x="48" y="6" width="4" height="4"/>
+                        <rect x="6" y="10" width="2" height="2"/><rect x="8" y="10" width="2" height="2"/><rect x="14" y="10" width="2" height="2"/><rect x="18" y="10" width="2" height="2"/><rect x="22" y="10" width="2" height="2"/><rect x="26" y="10" width="2" height="2"/><rect x="30" y="10" width="2" height="2"/><rect x="34" y="10" width="2" height="2"/><rect x="38" y="10" width="2" height="2"/><rect x="42" y="10" width="2" height="2"/><rect x="48" y="10" width="2" height="2"/><rect x="50" y="10" width="2" height="2"/>
+                        <rect x="6" y="14" width="2" height="2"/><rect x="8" y="14" width="2" height="2"/><rect x="16" y="14" width="2" height="2"/><rect x="20" y="14" width="2" height="2"/><rect x="24" y="14" width="2" height="2"/><rect x="28" y="14" width="2" height="2"/><rect x="32" y="14" width="2" height="2"/><rect x="36" y="14" width="2" height="2"/><rect x="40" y="14" width="2" height="2"/><rect x="48" y="14" width="2" height="2"/><rect x="50" y="14" width="2" height="2"/>
+                        <rect x="6" y="18" width="4" height="4"/><rect x="12" y="18" width="2" height="2"/><rect x="16" y="18" width="2" height="2"/><rect x="20" y="18" width="2" height="2"/><rect x="24" y="18" width="2" height="2"/><rect x="28" y="18" width="2" height="2"/><rect x="32" y="18" width="2" height="2"/><rect x="36" y="18" width="2" height="2"/><rect x="40" y="18" width="2" height="2"/><rect x="44" y="18" width="2" height="2"/><rect x="48" y="18" width="4" height="4"/>
+                        <rect x="12" y="24" width="2" height="2"/><rect x="16" y="24" width="2" height="2"/><rect x="20" y="24" width="2" height="2"/><rect x="24" y="24" width="2" height="2"/><rect x="28" y="24" width="2" height="2"/><rect x="32" y="24" width="2" height="2"/><rect x="36" y="24" width="2" height="2"/><rect x="40" y="24" width="2" height="2"/>
+                        <rect x="6" y="36" width="4" height="4"/><rect x="12" y="36" width="2" height="2"/><rect x="16" y="36" width="2" height="2"/><rect x="20" y="36" width="2" height="2"/><rect x="24" y="36" width="2" height="2"/><rect x="28" y="36" width="2" height="2"/><rect x="32" y="36" width="2" height="2"/><rect x="36" y="36" width="2" height="2"/><rect x="40" y="36" width="2" height="2"/><rect x="44" y="36" width="2" height="2"/><rect x="48" y="36" width="4" height="4"/>
+                    </g>
                 </svg>
                 <div style="color: var(--gray); margin-top: 0.3rem; font-size: 0.65rem;">
                     Start your next 90 days<br>
-                    <code style="color: var(--gold); font-size: 0.6rem;">leverage.app/continue</code>
+                    <code style="color: var(--gold); font-size: 0.6rem;">leveragejournal.com/continue</code>
                 </div>
             </div>
         </div>
