@@ -1,6 +1,8 @@
 // THE LEVERAGE JOURNAL™ - MASTER EDITION GENERATOR
 // Complete restructured version with proper chapters and organization
 
+console.log('✅ Journal generator script loaded successfully - ' + new Date().toISOString());
+
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
     generateMasterJournal();
