@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "buildCommand": "echo 'Skipping build - static site'",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/(.*)",
