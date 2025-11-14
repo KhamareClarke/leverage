@@ -452,12 +452,27 @@
         setTimeout(forceBlackAndWhite, 500);
     });
 
-console.log('✅ Journal generator script loaded successfully - ' + new Date().toISOString());
+console.log('✅ Inline script loaded - ' + new Date().toISOString());
 
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    generateMasterJournal();
-});
+// Try to load the external JavaScript file
+const script = document.createElement('script');
+script.src = '/js/journal-generator.js?v=' + Date.now();
+script.onload = function() {
+    console.log('✅ External journal-generator.js loaded successfully!');
+};
+script.onerror = function() {
+    console.error('❌ Failed to load external journal-generator.js');
+    console.error('File path attempted: /js/journal-generator.js');
+    document.getElementById('journal-content').innerHTML = 
+        '<div style="color: red; padding: 40px; text-align: center; border: 2px solid red; margin: 20px;">' +
+        '<h2>JavaScript Loading Error</h2>' +
+        '<p>The journal generator file could not be loaded from the server.</p>' +
+        '<p><strong>Path attempted:</strong> /js/journal-generator.js</p>' +
+        '<p>This usually means the js/ folder is not being deployed to your server.</p>' +
+        '<p><strong>Solution:</strong> Check your Netlify deployment logs and ensure the js/ folder is included.</p>' +
+        '</div>';
+};
+document.head.appendChild(script);
 
 function generateMasterJournal() {
     try {
