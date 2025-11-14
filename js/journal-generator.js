@@ -57,7 +57,7 @@ function generateMasterJournal() {
         // Initialize interactive elements
         initializeInteractiveElements();
         
-        console.log('Journal content generated successfully - Total pages should be 129');
+        console.log('Journal content generated successfully - Total pages should be 131');
         
         // Count pages for verification
         const pages = mainContainer.querySelectorAll('.page');
