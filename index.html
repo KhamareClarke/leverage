@@ -452,27 +452,66 @@
         setTimeout(forceBlackAndWhite, 500);
     });
 
-console.log('✅ Inline script loaded - ' + new Date().toISOString());
+console.log('✅ Script loader initialized - ' + new Date().toISOString());
 
-// Try to load the external JavaScript file
-const script = document.createElement('script');
-script.src = '/js/journal-generator.js?v=' + Date.now();
-script.onload = function() {
-    console.log('✅ External journal-generator.js loaded successfully!');
+// PRODUCTION FIX: Use relative path and add multiple fallback mechanisms
+let scriptLoaded = false;
+
+// Attempt 1: Try relative path first
+const script1 = document.createElement('script');
+script1.src = 'js/journal-generator.js?v=' + Date.now();
+script1.onload = function() {
+    console.log('✅ Journal generator loaded successfully via relative path!');
+    scriptLoaded = true;
 };
-script.onerror = function() {
-    console.error('❌ Failed to load external journal-generator.js');
-    console.error('File path attempted: /js/journal-generator.js');
-    document.getElementById('journal-content').innerHTML = 
-        '<div style="color: red; padding: 40px; text-align: center; border: 2px solid red; margin: 20px;">' +
-        '<h2>JavaScript Loading Error</h2>' +
-        '<p>The journal generator file could not be loaded from the server.</p>' +
-        '<p><strong>Path attempted:</strong> /js/journal-generator.js</p>' +
-        '<p>This usually means the js/ folder is not being deployed to your server.</p>' +
-        '<p><strong>Solution:</strong> Check your Netlify deployment logs and ensure the js/ folder is included.</p>' +
-        '</div>';
+script1.onerror = function() {
+    console.error('❌ Relative path failed, trying absolute path...');
+    
+    // Attempt 2: Try absolute path as fallback
+    const script2 = document.createElement('script');
+    script2.src = '/js/journal-generator.js?v=' + Date.now();
+    script2.onload = function() {
+        console.log('✅ Journal generator loaded successfully via absolute path!');
+        scriptLoaded = true;
+    };
+    script2.onerror = function() {
+        console.error('❌ Both paths failed, trying GitHub raw URL...');
+        
+        // Attempt 3: Try loading from GitHub raw as last resort
+        const script3 = document.createElement('script');
+        script3.src = 'https://raw.githubusercontent.com/KhamareClarke/leverage/main/js/journal-generator.js?v=' + Date.now();
+        script3.onload = function() {
+            console.log('✅ Journal generator loaded successfully from GitHub!');
+            scriptLoaded = true;
+        };
+        script3.onerror = function() {
+            console.error('❌ CRITICAL: All loading attempts failed');
+            document.getElementById('journal-content').innerHTML = 
+                '<div style="background: #ff0000; color: white; padding: 40px; text-align: center; border-radius: 8px; margin: 20px;">' +
+                '<h2>⚠️ JavaScript Loading Failed</h2>' +
+                '<p>Unable to load the journal generator script.</p>' +
+                '<p>Attempted paths:</p>' +
+                '<ul style="text-align: left; display: inline-block;">' +
+                '<li>js/journal-generator.js (relative)</li>' +
+                '<li>/js/journal-generator.js (absolute)</li>' +
+                '<li>GitHub raw URL</li>' +
+                '</ul>' +
+                '<p><strong>Please check browser console for details.</strong></p>' +
+                '</div>';
+        };
+        document.head.appendChild(script3);
+    };
+    document.head.appendChild(script2);
 };
-document.head.appendChild(script);
+document.head.appendChild(script1);
+
+// Verify script loaded after 3 seconds
+setTimeout(function() {
+    if (!scriptLoaded && typeof generateMasterJournal === 'undefined') {
+        console.error('❌ Script not loaded after 3 seconds, using stub functions');
+        // The stub functions below will be used as emergency fallback
+    }
+}, 3000);
 
 function generateMasterJournal() {
     try {
