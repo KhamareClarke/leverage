@@ -3,36 +3,89 @@
 
 console.log('✅ Journal generator script loaded successfully - ' + new Date().toISOString());
 
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    generateMasterJournal();
+// Initialize when page loads - handle both cases (DOM ready or already loaded)
+function initializeJournal() {
+    console.log('🔄 Initializing journal generation...');
+    console.log('📊 Document readyState:', document.readyState);
+    
+    if (document.readyState === 'loading') {
+        // DOM hasn't finished loading yet
+        console.log('⏳ DOM still loading, waiting for DOMContentLoaded...');
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ DOMContentLoaded fired, starting generation...');
+            generateMasterJournal();
+        });
+    } else {
+        // DOM is already loaded (interactive or complete)
+        console.log('✅ DOM already loaded, starting generation immediately...');
+        // Use setTimeout to ensure all other scripts have run
+        setTimeout(function() {
+            generateMasterJournal();
+        }, 100);
+    }
+}
+
+// Also add a fallback in case the above doesn't work
+window.addEventListener('load', function() {
+    const journalContent = document.getElementById('journal-content');
+    if (journalContent && journalContent.querySelectorAll('.page').length === 0) {
+        console.log('⚠️ Fallback: No pages found after window load, attempting generation...');
+        generateMasterJournal();
+    }
 });
 
+// Start initialization
+initializeJournal();
+
 function generateMasterJournal() {
+    // Prevent multiple simultaneous executions
+    if (window.journalGenerationInProgress) {
+        console.log('⏸️ Journal generation already in progress, skipping...');
+        return;
+    }
+    window.journalGenerationInProgress = true;
+    
     try {
-        console.log('Starting journal generation...');
+        console.log('🚀 Starting journal generation...');
+        
+        // Get the main container first to ensure it exists
+        const mainContainer = document.getElementById('journal-content');
+        if (!mainContainer) {
+            console.error('❌ Could not find journal-content element');
+            window.journalGenerationInProgress = false;
+            return;
+        }
+        console.log('✅ Found journal-content container');
         
         // Create a temporary container to hold all pages
         const tempContainer = document.createElement('div');
         
         // Generate all sections in order with error checking
-        console.log('Generating Chapter 1 Vision...');
+        console.log('📝 Generating Chapter 1 Vision...');
         const chapter1 = generateChapter1Vision();
-        console.log('Generating Chapter 1 Vision Complete...');
+        console.log('✅ Chapter 1 Vision Complete');
         const chapter1Complete = generateChapter1VisionComplete();
-        console.log('Generating Chapter 2 Plan...');
+        console.log('✅ Chapter 1 Vision Complete section done');
+        console.log('📝 Generating Chapter 2 Plan...');
         const chapter2 = generateChapter2Plan();
-        console.log('Generating Chapter 3 Do...');
+        console.log('✅ Chapter 2 Plan Complete');
+        console.log('📝 Generating Chapter 3 Do (this may take a moment - 90 pages)...');
         const chapter3 = generateChapter3Do();
-        console.log('Generating Chapter 4 Review...');
+        console.log('✅ Chapter 3 Do Complete');
+        console.log('📝 Generating Chapter 4 Review...');
         const chapter4 = generateChapter4Review();
-        console.log('Generating Chapter 5 Legacy...');
+        console.log('✅ Chapter 4 Review Complete');
+        console.log('📝 Generating Chapter 5 Legacy...');
         const chapter5 = generateChapter5Legacy();
-        console.log('Generating Back Matter...');
+        console.log('✅ Chapter 5 Legacy Complete');
+        console.log('📝 Generating Back Matter...');
         const backMatter = generateBackMatter();
-        console.log('Generating Back Cover...');
+        console.log('✅ Back Matter Complete');
+        console.log('📝 Generating Back Cover...');
         const backCover = generateBackCover();
+        console.log('✅ Back Cover Complete');
         
+        console.log('📦 Assembling all content...');
         tempContainer.innerHTML = 
             chapter1 +
             chapter1Complete +
@@ -43,13 +96,7 @@ function generateMasterJournal() {
             backMatter +
             backCover;
         
-        // Get the main container
-        const mainContainer = document.getElementById('journal-content');
-        if (!mainContainer) {
-            console.error('Could not find journal-content element');
-            return;
-        }
-        
+        console.log('📥 Inserting content into DOM...');
         // Clear existing content and append new content
         mainContainer.innerHTML = '';
         while (tempContainer.firstChild) {
@@ -59,14 +106,33 @@ function generateMasterJournal() {
         // Initialize interactive elements
         initializeInteractiveElements();
         
-        console.log('Journal content generated successfully - Total pages should be 131');
-        
         // Count pages for verification
         const pages = mainContainer.querySelectorAll('.page');
-        console.log(`Total pages generated: ${pages.length}`);
+        const dailyPages = mainContainer.querySelectorAll('.daily-page');
+        console.log(`✅ Journal content generated successfully!`);
+        console.log(`📊 Total pages generated: ${pages.length}`);
+        console.log(`📊 Daily pages: ${dailyPages.length}`);
+        console.log('🎉 Generation complete!');
+        
+        window.journalGenerationInProgress = false;
         
     } catch (error) {
-        console.error('Error generating journal:', error);
+        console.error('❌ Error generating journal:', error);
+        console.error('Error stack:', error.stack);
+        window.journalGenerationInProgress = false;
+        // Show error to user but don't break the page
+        const mainContainer = document.getElementById('journal-content');
+        if (mainContainer) {
+            const errorDiv = document.createElement('div');
+            errorDiv.style.cssText = 'color: red; text-align: center; padding: 2rem; background: #ff000020; border: 2px solid red; border-radius: 8px; margin: 20px;';
+            errorDiv.innerHTML = `
+                <h3>⚠️ Generation Error</h3>
+                <p>An error occurred while generating the journal content.</p>
+                <p style="font-size: 0.9rem; color: #666;">Error: ${error.message}</p>
+                <p style="font-size: 0.8rem; margin-top: 1rem;">Please refresh the page to try again.</p>
+            `;
+            mainContainer.appendChild(errorDiv);
+        }
     }
 }
 
@@ -970,10 +1036,26 @@ function generateChapter3Do() {
     // Generate ALL 90 daily pages
     let currentPageNumber = 19;
     for (let day = 1; day <= 90; day++) {
-        const quote = uniqueQuotes[day - 1];
+        // Ensure we have a valid quote, use fallback if missing
+        let quote = uniqueQuotes[day - 1];
+        if (!quote) {
+            // Fallback quote if array doesn't have enough entries
+            quote = {
+                quote: "Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution.",
+                author: "Aristotle",
+                lesson: "Excellence is a system, not an event.",
+                reflection: "How will you systematize excellence in your daily practice?"
+            };
+        }
         
-        html += generateDailyPage(day, quote, currentPageNumber);
-        currentPageNumber++;
+        try {
+            html += generateDailyPage(day, quote, currentPageNumber);
+            currentPageNumber++;
+        } catch (error) {
+            console.error(`Error generating page for day ${day}:`, error);
+            // Continue with next day even if this one fails
+            currentPageNumber++;
+        }
         
         // Add weekly review every 7th day (except day 90)
         if (day % 7 === 0 && day < 90) {
@@ -992,6 +1074,13 @@ function generateChapter3Do() {
 }
 
 function generateDailyPage(day, quote, pageNumber) {
+    // Ensure quote has all required properties
+    const safeQuote = quote || {
+        quote: "Excellence is never an accident.",
+        author: "Aristotle",
+        lesson: "Excellence is a system, not an event."
+    };
+    
     return `
     <!-- DAY ${day} -->
     <div class="page daily-page" style="padding-top: 5mm;">
@@ -1056,13 +1145,13 @@ function generateDailyPage(day, quote, pageNumber) {
         
         <div class="quote-section" style="background: var(--black-card); padding: 0.3rem; border-radius: 2px; border-left: 1px solid var(--gold); margin-bottom: 0.15rem;">
             <blockquote style="color: var(--gold-light); font-size: 0.8rem; font-style: italic; margin-bottom: 0.18rem;">
-                "${quote.quote}"
+                "${safeQuote.quote || 'Excellence is never an accident.'}"
             </blockquote>
-            <cite style="color: var(--gray); font-size: 0.8rem;">— ${quote.author}</cite>
+            <cite style="color: var(--gray); font-size: 0.8rem;">— ${safeQuote.author || 'Aristotle'}</cite>
             
             <div class="lesson" style="margin-top: 0.2rem; padding-top: 0.2rem; border-top: 1px solid var(--gray-dark);">
                 <strong style="color: var(--gold); font-size: 0.8rem;">Today's Lesson:</strong> 
-                <span style="color: var(--gray-light); font-size: 0.8rem;">${quote.lesson}</span>
+                <span style="color: var(--gray-light); font-size: 0.8rem;">${safeQuote.lesson || 'Excellence is a system, not an event.'}</span>
             </div>
         </div>
         

@@ -666,12 +666,23 @@ function initializeInteractiveElements() {
 
 <!-- Fallback if inline JS fails to load -->
 <script>
+// Increased timeout to 10 seconds to allow for generation of 90+ pages
 setTimeout(function() {
-    if (!document.querySelector('.daily-page')) {
-        console.error('JavaScript failed to load - pages not generated');
-        document.getElementById('journal-content').innerHTML = '<div style="color: red; text-align: center; padding: 2rem;">Error: JavaScript file failed to load. Please refresh the page.</div>';
+    const journalContent = document.getElementById('journal-content');
+    if (journalContent) {
+        // Check if any pages were generated (not just daily pages)
+        const hasPages = journalContent.querySelectorAll('.page').length > 0;
+        const hasDailyPages = document.querySelector('.daily-page');
+        
+        // Only show error if NO content was generated at all
+        if (!hasPages && !hasDailyPages) {
+            console.error('JavaScript failed to load - pages not generated');
+            journalContent.innerHTML = '<div style="color: red; text-align: center; padding: 2rem; background: #ff000020; border: 2px solid red; border-radius: 8px;">Error: JavaScript file failed to load. Please refresh the page.<br><br><small>If this persists, check the browser console for details.</small></div>';
+        } else {
+            console.log('Journal generation appears successful. Pages found:', journalContent.querySelectorAll('.page').length);
+        }
     }
-}, 3000);
+}, 10000); // Increased from 3000ms to 10000ms (10 seconds)
 </script>
 <!-- Updated: 2025-11-12 -->
 </body>
