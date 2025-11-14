@@ -1,4 +1,4 @@
-# Leverage Journal
+# Leverage Journal - Premium A5 Productivity System
 
 ## Latest Updates
 
